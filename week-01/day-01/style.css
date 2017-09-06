@@ -1,0 +1,92 @@
+body {
+    background-image: url("background.png");
+    font-family: 'Inconsolata', monospace;
+}
+
+li {
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #ff0099;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+}
+
+.nav {
+    padding-right: 10%;
+    padding-left: 0;
+}
+
+.image {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 11%;
+    padding-right: 0;
+}
+
+h1 {
+    font-size: 300%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+h2 {
+    color: #ff0099;
+    font-size: 200%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+h3 {
+    font-size: 225%;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: center;
+    }
+
+h4 {
+    font-size: 200%;
+    padding-right: 10%;
+    padding-left: 10%;
+    line-height: 10px;
+}
+
+p {
+    font-size: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+p.big {
+    font-size: 150%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+p.small {
+    line-height: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+p.separator {
+    text-align: center;
+    font-size: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
