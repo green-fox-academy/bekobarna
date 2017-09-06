@@ -4,4 +4,8 @@
 Welcome to my main repo at Green-Fox Academy. 
 Hopefully everything is understandable and clear. If not, I  gladly accept any help with it :)
 
-My other repositories at Green-Fox re the following:
+My other repositories at Green-Fox are the following:
+
+1. First week
+
+
