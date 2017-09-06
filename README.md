@@ -6,4 +6,7 @@ Hopefully everything is understandable and clear. If not, I  gladly accept any h
 
 My other repositories at Green-Fox from daily the workshops:
 
-⋅⋅* First week
+  * First week
+  
+    Day 2: 
+
