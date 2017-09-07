@@ -1,0 +1,23 @@
+p {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin: 6px;
+    border: none;
+    padding: 55px;
+    background-color: #0CEBDE;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial;
+    border-radius: 100%;
+    text-align: center;
+}
+
+.top {
+    background-color: #B90CEB;
+}
+
+.bottom {
+    background-color: #EBBE0C
+}
