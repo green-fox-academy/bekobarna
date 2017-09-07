@@ -13,11 +13,12 @@ ul {
 ol {
     color: #FF00FF;
     list-style-type: upper-roman;
-    text-decoration: underline;
+    text-decoration-line: underline;
 }
+
 ol :last-child {
     color: black;
-    text-decoration: none;
+    text-decoration-line: none;
 }
 
 p {
