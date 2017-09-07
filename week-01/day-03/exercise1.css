@@ -1,0 +1,11 @@
+p {
+    width: 350px;
+    height: 122px;
+    border: 5px solid rgb(125,206,148);
+    padding: 18px;
+    margin: 5px 5px 20px 5px;
+    background-color: rgb(14,145,161);
+    font-size: 36px;
+    color: rgb(9,98,102);
+    font-family: Arial;
+}
