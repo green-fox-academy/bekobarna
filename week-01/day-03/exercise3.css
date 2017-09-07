@@ -5,11 +5,11 @@ p {
     border-right: 15px solid rgb(66,133,244);
     padding: 48px 15px;
     margin: auto;
-    text-align: center;
+    text-align: center
     font-size: 36px;
     color: white;
     font-family: Arial;
-   }
+}
 
 p:nth-child(1) {
     background-color: rgb(230,118,118);
