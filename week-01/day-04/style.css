@@ -43,6 +43,14 @@ form {
     display: inline-block;
 }
 
+.left > :nth-child(5) {
+    display: inline-block;
+}
+
+.left > :nth-child(6) {
+    display: inline-block;
+}
+
 .right {
     float: right;
     height: 45%;
