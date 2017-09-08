@@ -19,6 +19,7 @@ ol {
 ol :last-child {
     color: black;
     text-decoration-line: none;
+    text-decoration-color: black;
 }
 
 p {
