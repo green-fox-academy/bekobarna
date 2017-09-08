@@ -9,33 +9,85 @@
 
   <body>
     <form>
-    
       <section class="top">
       <p>Profil</p>
       </section>
       <section class="left">
-        <div>szemelyes adatok</div>
+        <div>Személyes adatok</div>
         <div>
           <fieldset>
-                <legend>Nev</legend>
-                <input type="text"><br>
+            <legend>Név</legend>
+            <input type="text"><br>
+            </fieldset>
+        </div>
+        <div>
+          <fieldset>
+            <legend>Születési éved</legend>
+            <input type="number" name="szuletesi eved" min="1900" max="2016">
           </fieldset>
-        <div>szuletesi ido</div>
-        <div>nem</div>
-        <div>marka</div>
+        </div>
+        <div>Nemed
+          <input type="radio" name="nem" value="ferfi"> Férfi <br>
+          <input type="radio" name="nem" value="no"> Nő <br>
+        </div>
+        <div>Milyen márkát szeretsz?<br>
+            <input type="checkbox" name="marka1" value="Adidas"> Adidas<br>
+            <input type="checkbox" name="marka2" value="Apple"> Apple <br>
+            <input type="checkbox" name="marka3" value="Coca-Cola"> Coca-Cola <br>
+            <input type="checkbox" name="marka4" value="Mazda"> Mazda <br>
+            Többet is választhatsz!
+        </div>
+        <div>
+          <input type="checkbox" name="marka6" value="Opel"> Opel <br>
+          <input type="checkbox" name="marka7" value="Ray-ban"> Ray-ban <br>
+          <input type="checkbox" name="marka8" value="Starbucks"> Starbucks <br>
+          <input type="checkbox" name="marka9" value="Tesla"> Tesla <br>
+          <input type="checkbox" name="marka10" value="Yahoo"> Yahoo <br>
+        </div>
       </section>
       <section class="right">
         <div>kapcsolat</div>
-        <div>e-mail</div>
-        <div>telefonszam</div>
-        <div>face</div>
-        <div>twitter</div>
-        <div>haz</div>
+        <div>
+          <fieldset>
+                <legend>Telefonszam</legend>
+                <input type="text" name="telefonszam" placeholder="ide jon a telefonszamod"> <br>
+          </fieldset>
+        </div>
+        <div>E-mail:
+          <input type="email" name="email" placeholder="ide meg az e-mailed">
+          </div>
+        <div>Facebook profilod
+          <input type="text" name="facebook" placeholder="facebookod, ha van">
+        </div>
+        <div>Twitter profilod
+          <input type="text" name="twitter" placeholder="twittered, ha van">
+        </div>
+        <div>Milyen házban laksz?
+          <select>
+            <option value="panel">Panel</option>
+            <option value="csaladi">csaladi</option>
+                <option value="tarsas">tarsas</option>
+                <option value="hid alatt">hid alatt</option>
+          </select>
+        </div>
       </section>
       <section class="bottom">
-        <div>bemutat</div>
-        <div>cv</div>
-        <div>feltetel</div>
+        <div>
+          <fieldset>
+              <legend>Bemutatkozas:</legend>
+              <input type="text"><br>
+          </fieldset>
+        </div>
+        <div>CV
+            <form action="##">
+              <input type="file" name="CV" accept="pdf/*">
+            </form>
+        </div>
+        <div>feltetel\
+
+
+      
+        </div>
         <div>mentes  torles</div>
       </section>
       
