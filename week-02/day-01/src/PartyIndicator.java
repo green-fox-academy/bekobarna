@@ -12,3 +12,24 @@
 //
 // It should print: Sausage party
 // If no girls are coming, regardless the count of the people
+
+import java.util.Scanner;
+
+public class PartyIndicator {
+    public static void main(String[] args) {
+        System.out.println("First number: ");
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        if (number <= 0) {
+            System.out.println("zero");
+        } else if (number == 1) {
+            System.out.println("one");
+        }  else if (number == 2) {
+            System.out.println("two");
+        }  else if (number == 2) {
+            System.out.println("two");
+        } else {
+            System.out.println("A lot");
+        }
+    }
+}
