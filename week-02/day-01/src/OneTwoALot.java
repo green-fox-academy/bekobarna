@@ -16,8 +16,6 @@ public class OneTwoALot {
         } else if (number == 1) {
             System.out.println("one");
         }  else if (number == 2) {
-        System.out.println("two");
-        }  else if (number == 2) {
             System.out.println("two");
         } else {
             System.out.println("A lot");
