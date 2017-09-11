@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f5eb9b2-adbf-4c21-a917-b09bc0714761" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PartyIndicator.java" afterPath="$PROJECT_DIR$/src/PartyIndicator.java" />
-    </list>
+    <list default="true" id="0f5eb9b2-adbf-4c21-a917-b09bc0714761" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -331,12 +329,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505127720976</updated>
       <workItem from="1505127726945" duration="1557000" />
-      <workItem from="1505129326427" duration="11616000" />
+      <workItem from="1505129326427" duration="11711000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13173000" />
+    <option name="totallyTimeSpent" value="13268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
