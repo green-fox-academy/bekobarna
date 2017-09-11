@@ -3,7 +3,9 @@ public class Swap {
     int a = 123;
     int b = 526;
     // Swap the values of the wariables
-    
+
+      a = 526;
+      b = 123;
 
 
 
