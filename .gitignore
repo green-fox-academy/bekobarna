@@ -1,0 +1,8 @@
+# IntelliJ files and folders
+.idea/
+out
+*.iml
+*.iml
+
+# gf software files
+.gf.json

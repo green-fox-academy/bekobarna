@@ -17,11 +17,14 @@ import java.util.Scanner;
 
 public class PartyIndicator {
     public static void main(String[] args) {
-        System.out.println("First number: ");
-        Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
-        if (number <= 0) {
-            System.out.println("zero");
+        System.out.println("Number of girls: ");
+        Scanner scan1 = new Scanner(System.in);
+        int girls = scan1.nextInt();
+        System.out.println("Number of boys: ");
+        Scanner scan2 = new Scanner(System.in);
+        int boys = scan2.nextInt();
+        if ((girls == boys) && ((girls + boys) > 20 )) {
+            System.out.println("The party is exellent!");
         } else if (number == 1) {
             System.out.println("one");
         }  else if (number == 2) {
