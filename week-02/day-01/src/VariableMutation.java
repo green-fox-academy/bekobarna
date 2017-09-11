@@ -25,8 +25,7 @@ public class VariableMutation {
 
 		int e = 8;
 	  // please cube of e's value
-    e *= 2;
-    System.out.println(e);
+    System.out.println(e * e);
 
 
 		int f1 = 123;
@@ -54,7 +53,7 @@ public class VariableMutation {
 		int i1 = 10;
 	  int i2 = 3;
   	// tell if i1 is higher than i2 squared and smaller than i2 cubed (print as a boolean)
-      boolean i1bigger = ((i1 > (i2*=2)) && (i1 > (i2/=2)));
+      boolean i1bigger = ((i1 > (i2 * i2)) && (i1 > (i2 * i2 * i2)));
 
 
 
