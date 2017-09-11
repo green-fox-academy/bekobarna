@@ -10,5 +10,9 @@ public class IntroduceYourself {
     //  John Doe
     //  31
     //  1.87
+      System.out.println("Beko Barna");
+      System.out.println("26");
+      System.out.println("1.82");
+
   }
 }
