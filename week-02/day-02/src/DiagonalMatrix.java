@@ -14,6 +14,7 @@ public class DiagonalMatrix {
         for (int i = 0; i < af.length; i++) {
             System.out.println(af[i] + " ");
 
-    }
+        }
 
+    }
 }
