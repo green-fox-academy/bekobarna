@@ -24,15 +24,13 @@ public class PartyIndicator {
         Scanner scan2 = new Scanner(System.in);
         int boys = scan2.nextInt();
         if ((girls == boys) && ((girls + boys) > 20 )) {
-            System.out.println("The party is exellent!");
-        } else if (number == 1) {
-            System.out.println("one");
-        }  else if (number == 2) {
-            System.out.println("two");
-        }  else if (number == 2) {
-            System.out.println("two");
-        } else {
-            System.out.println("A lot");
+            System.out.println("The party is excellent!");
+        } else if ((girls == boys) || ((girls / boys) != 1)) {
+            System.out.println("Quite cool party!");
+        } else if ((girls + boys) > 20) {
+            System.out.println("Average party...");
+        } else if (girls == 0) {
+            System.out.println("Sausage party");
         }
     }
 }
