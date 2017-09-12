@@ -18,3 +18,20 @@ public class DiagonalMatrix {
 
     }
 }
+
+
+/*import java.util.Arrays;
+
+public class DiagonalMatrix {
+    public static void main(String[] args) {
+        int[] first = {1, 0, 0, 0};
+        int[] second = {0, 1, 0, 0};
+        int[] third = {0, 0, 1, 0};
+        int[] fourth = {0, 0, 0, 1};
+        System.out.println(Arrays.toString(first));
+        System.out.println(Arrays.toString(second));
+        System.out.println(Arrays.toString(third));
+        System.out.println(Arrays.toString(fourth));
+    }
+}*/
+
