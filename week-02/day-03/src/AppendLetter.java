@@ -7,8 +7,7 @@ public class AppendLetter{
         ArrayList<String> far = new ArrayList<String>(Arrays.asList("kuty", "macsk", "kacs", "rók", "halacsk"));
         String a = "a";
         for (int i = 0; i < far.size(); i++) {
-           String name = far.get(i);
-           name = name + "a";
+           String name = far.get(i) + "a";
            far.set(i, name);
         }
         System.out.println(far);
