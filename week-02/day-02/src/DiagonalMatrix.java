@@ -10,14 +10,35 @@
 
 public class DiagonalMatrix {
     public static void main(String[] args) {
-        int[] af = {4, 5, 6, 7};
-        for (int i = 0; i < af.length; i++) {
-            System.out.println(af[i] + " ");
+        int matrix [][] = new int [4][4];
 
-        }
 
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++){
+                if (i == 0){
+                    System.out.println(1);
+                } else {
+                    System.out.println(0);
+                }
+            }
+                if (i == 0){
+                System.out.println(1);
+            } else {
+                System.out.println(0);
+            }
     }
 }
+}
+
+   /* int[] af = {4, 5, 6, 7};
+        for (int i = 0; i < af.length; i++) {
+        System.out.println(af[i] + " ");
+
+    }*/
+
+
+
+
 
 
 /*import java.util.Arrays;
