@@ -5,14 +5,11 @@
 public class Reverse {
     public static void main(String... args){
         String reversed = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI";
-        char result = reversed.charAt(10);
-        System.out.println(result);
 
-
-       /* for (int i = reversed.length(), i >= 0, i--) {
+        for (int i = reversed.length() - 1; i >= 0 ; i--) {
             char result = reversed.charAt(i);
-            System.out.println(result);*//*
-        }*/
+            System.out.println(result);
+        }
     }
 }
 
