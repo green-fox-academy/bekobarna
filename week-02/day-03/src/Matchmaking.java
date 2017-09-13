@@ -8,8 +8,15 @@ public class Matchmaking{
         ArrayList<String> boys = new ArrayList<String>(Arrays.asList("Joe","Fred","Béla","Todd","Neef","Jeff"));
         ArrayList<String> order = new ArrayList<String>();
 
+        for (int i = 0; i < girls.size(); i++) {
+            String girlsName = girls.get(i);
+            order.add(i, girlsName);
+            String boysName = boys.get(i);
+            order.add(i+1, boysName);
+        }
 
-
+        String Jeff = boys.get(5);
+        order.add(10, Jeff);
 
         System.out.println(order);
     }
