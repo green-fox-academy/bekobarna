@@ -22,7 +22,7 @@ public class MultiplicationTable {
         Scanner scan = new Scanner (System.in);
         int number = scan.nextInt();
         for (int i = 0; i <= 10; i++) {
-            System.out.println(i + "*" + number + "=" + (i * number));
+            System.out.println(i + " * " + number + " = " + (i * number));
         }
     }
 }
