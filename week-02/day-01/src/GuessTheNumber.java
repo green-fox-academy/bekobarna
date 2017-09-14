@@ -9,23 +9,17 @@
 import java.util.Scanner;
 public class GuessTheNumber {
     public static void main(String[] args) {
-        while(true) {
-            int numberStored = 99;
-            int numberOfTries = 0;
-            while (true) {
-                System.out.println("Please enter a number: ");
-                Scanner scan = new Scanner(System.in);
-                int guess = scan.nextInt();
-                numberOfTries++;
-
-                if (guess == numberStored) {
-                    System.out.println("You found the number: " + numberStored);
-                    // leave the first loop
-                    break;
-                }
-                else if (guess < numberStored) System.out.println("The stored number is lower");
-                else if (guess > numberStored) System.out.println("The stored number is higher");
+        int numberStored = 99;
+        while (true) {
+            System.out.println("Please enter a number: ");
+            Scanner scan = new Scanner(System.in);
+            int guess = scan.nextInt();
+            if (guess == numberStored) {
+                System.out.println("You found the number: " + numberStored);
+                break;
             }
+            else if (guess > numberStored) System.out.println("The stored number is lower");
+            else  System.out.println("The stored number is higher");
         }
     }
 }
