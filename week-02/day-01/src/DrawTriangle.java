@@ -14,7 +14,7 @@ public class DrawTriangle {
         System.out.println("Please write a number here: ");
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
-        for (int i = 0; i < (number); i++) {
+        for (int i = 0; i < number; i++) {
             for (int j = 0; j <= i; j++){
                 System.out.print("*");
             }
