@@ -14,7 +14,7 @@ public class VariableMutation {
 
     int c = 44;
     // please double c's value
-    System.out.println(c);
+    System.out.println(c +c);
 
 
     int d = 125;
@@ -51,7 +51,7 @@ public class VariableMutation {
 
 
 		int i1 = 10;
-	  int i2 = 3;
+	    int i2 = 3;
   	// tell if i1 is higher than i2 squared and smaller than i2 cubed (print as a boolean)
       boolean i1bigger = ((i1 > (i2 * i2)) && (i1 > (i2 * i2 * i2)));
 
@@ -66,9 +66,8 @@ public class VariableMutation {
 
 		String k = "Apple";
   	//fill the k variable with its cotnent 4 times
-      System.out.println(k);
-      System.out.println(k);
-      System.out.println(k);
-      System.out.println(k);
-  }
+      for (int i = 0; i < 4; i++) {
+          System.out.println(k);
+      }
+        }
 }

@@ -4,7 +4,8 @@ import java.util.*;
 
 public class AppendLetter{
     public static void main(String... args){
-        ArrayList<String> far = new ArrayList<String>(Arrays.asList("kuty", "macsk", "kacs", "rók", "halacsk"));
+        ArrayList<String> far = new ArrayList<String>(
+            BanasArrays.asList("kuty", "macsk", "kacs", "rók", "halacsk"));
         String a = "a";
         for (int i = 0; i < far.size(); i++) {
            String name = far.get(i) + "a";

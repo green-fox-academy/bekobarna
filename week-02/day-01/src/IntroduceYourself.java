@@ -10,9 +10,12 @@ public class IntroduceYourself {
     //  John Doe
     //  31
     //  1.87
-      System.out.println("Beko Barna");
-      System.out.println("26");
-      System.out.println("1.82");
 
+      String name = "Beko Barna";
+      String age = "26";
+      String height = "1.82";
+      System.out.println(name);
+      System.out.println(age);
+      System.out.println(height);
   }
 }

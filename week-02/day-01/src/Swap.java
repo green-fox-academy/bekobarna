@@ -7,8 +7,6 @@ public class Swap {
       a = 526;
       b = 123;
 
-
-
     System.out.println(a);
     System.out.println(b);
   }
