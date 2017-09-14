@@ -11,13 +11,14 @@ public class ParametricAverage {
         System.out.println("Please enter a number: ");
         Scanner scan = new Scanner(System.in);
         double numTimes = scan.nextInt();
-        for (int i = 0; i < numTimes-1; i++) {
-            System.out.println("Please enter a number: ");
+        double numEntered = 0;
+        for (int i = 0; i < numTimes; i++) {
+            System.out.println("Please enter another number: ");
             Scanner scan2 = new Scanner(System.in);
-            double numEntered = scan2.nextInt();
-            double sum = numTimes + numEntered;
-            double average = (sum / numTimes);
-            System.out.println("Sum; " + sum + " " + "Average: " + average);
+            numEntered = scan2.nextInt();
         }
+        double sum = numTimes + numEntered;
+        double average = (sum / numTimes);
+        System.out.println("Sum; " + sum + " " + "Average: " + average);
     }
 }
