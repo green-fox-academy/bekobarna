@@ -13,7 +13,7 @@ public class Anagram {
     String secondWord = scan.nextLine();
     char[] chars2 = secondWord.toCharArray();
     Arrays.sort(chars2);
-    String secondWordSorted = new String(chars);
+    String secondWordSorted = new String(chars2);
 
     System.out.println("");
     System.out.println(isAnagram(firstWordSorted, secondWordSorted));
