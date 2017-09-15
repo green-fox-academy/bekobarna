@@ -12,7 +12,7 @@ public class PalindromeBuilder {
   public static String createPalindrome (String word) {
       StringBuilder word2 = new StringBuilder(word);
       word2.reverse();
-      word = word + word2;
+      word = word + " - " + word2;
       return word;
     }
 }
