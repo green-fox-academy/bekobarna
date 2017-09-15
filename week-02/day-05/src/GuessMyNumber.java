@@ -16,14 +16,16 @@ public class GuessMyNumber {
     int numberStored = getRandomNumber(numStart, numEnd);
 
     while (true) {
+      System.out.println("");
       System.out.println("Please enter a number between " + numStart + " and " + numEnd + ":");
       int guess = scan.nextInt();
       if (guess == numberStored) {
         System.out.println("Congratulations, you found the number: " + numberStored);
         break;
       }
-      else if (guess > numberStored) System.out.println("The stored number is lower");
-      else  System.out.println("The stored number is higher");
+      else if (guess > numberStored) {
+        System.out.println("The stored number is lower");
+      } else  System.out.println("The stored number is higher");
     }
   }
 
