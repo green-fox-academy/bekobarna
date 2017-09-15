@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class ArmstrongNumber {
   public static void main(String[] args) {
@@ -15,9 +15,16 @@ public class ArmstrongNumber {
 
   static int armstrongCalculator (int num) {
     int length = (int)(Math.log10(num) + 1);
+    int temp = num;
+    ArrayList<Integer> arrayNumbers = new ArrayList<Integer>();
+    do {
+      arrayNumbers.add(temp % 10);
+      temp /= 10;
+    } while  (temp > 0);
 
-
-
+    for (int i = 0; i < length; i++) {
+      int num2 = num * num;
+    }
 
 
 
