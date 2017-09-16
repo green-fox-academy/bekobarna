@@ -1,5 +1,6 @@
 // Join the two lists by matching one girl with one boy in the order list
 // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
+
 import java.util.*;
 
 public class Matchmaking{
@@ -11,10 +12,10 @@ public class Matchmaking{
         ArrayList<String> order = new ArrayList<String>();
 
         for (int i = 0; i < girls.size(); i++) {
-            order.add(i, girls.get(i));
-            order.add(i, boys.get(i));
+            order.add(order.size(), girls.get(i));
+            order.add(order.size(), boys.get(i));
         }
-        order.add(10, boys.get(5));
+        order.add(order.size(), boys.get(5));
         System.out.println(order);
     }
 }
