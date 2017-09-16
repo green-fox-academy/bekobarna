@@ -11,6 +11,7 @@ public class Candyshop{
         arrayList.add(2);
         arrayList.add("Brownie");
         arrayList.add(false);
+
         arrayList.set(1, "Croissant");
         arrayList.set(3, "Ice Cream");
         System.out.println(arrayList);
