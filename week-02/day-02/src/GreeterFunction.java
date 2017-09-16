@@ -12,7 +12,7 @@ public class GreeterFunction {
     System.out.println("Greetings, dear " + greet(al));
     }
 
-    public static String greet(String input) {
-        return input;
+    public static String greet(String input){
+            return input;
     }
 }

@@ -11,13 +11,19 @@ public class Factorio {
         System.out.println("Please write a number here: ");
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
+
+        System.out.println("");
         System.out.println("The factorial of your number is: " + factorio(number));
     }
 
-    public static int factorio (int number) {
-        for (int i = 0; i < number; i++) {
-            number = i * number;
+    public static int factorio(int num) {
+        if (num == 0) {
+            return 1;
         }
-        return number;
+        int numFact = 1;
+        for (int i = 1; i <= num; i++) {
+           numFact *= i;
+        }
+        return numFact;
     }
 }

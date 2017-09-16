@@ -13,6 +13,7 @@ public class AppendA {
     }
 
     public static String appendA (String input){
-        return input + "am";
+
+        return input + "a";
     }
 }

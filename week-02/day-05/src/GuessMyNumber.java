@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class GuessMyNumber {
   public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class GuessMyNumber {
     int numEnd = scan.nextInt();
 
     System.out.println("");
-    System.out.println("Awesome, let`s start!");
+    System.out.println("Awesome, let`s start!  :)");
 
     int numberStored = getRandomNumber(numStart, numEnd);
 
