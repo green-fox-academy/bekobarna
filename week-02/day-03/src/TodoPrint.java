@@ -12,9 +12,14 @@
 public class TodoPrint {
     public static void main(String... args){
         String todoText = " - Buy milk\n";
-        String start = "My todo:\n";
-        String end = " - Download games\n";
-        String last = "     - Diablo";
-        System.out.println(start + todoText + end + last);
+        String todoBeginning = "My todo:\n";
+        String todoGames = " - Download games\n";
+        String todoDiablo = "    - Diablo";
+
+        StringBuilder todo = new StringBuilder(todoText);
+        todo.insert(0, todoBeginning);
+        todo.insert(21, todoGames);
+        todo.insert(39, todoDiablo);
+        System.out.println(todo);
     }
 }
