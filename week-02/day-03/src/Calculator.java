@@ -20,13 +20,43 @@ public class Calculator {
   public static void main(String... args) {
     System.out.println("Please type in the expression:");
     Scanner scan = new Scanner(System.in);
-    int operation = scan.nextInt();
+    String operation = scan.nextLine();
     int num1 = scan.nextInt();
     int num2 = scan.nextInt();
 
-    
+    if (operation == "+") {
+
+    } else if (operation == "-") {
+
+    } else if (operation == "*") {
+
+    } else if (operation == "/") {
+
+    } else if (operation == "%") {
+
+    }
+
   }
 
 
+  public static int addition (int num1, int num2) {
+    
+  }
+
+  public static int subtraction (int num1, int num2) {
+
+  }
+
+  public static int multiplication (int num1, int num2) {
+
+  }
+
+  public static int division (int num1, int num2) {
+
+  }
+
+  public static int remainder (int num1, int num2) {
+
+  }
 
 }
