@@ -8,5 +8,4 @@ public class SumElements {
     int sum = r[1] + r[2];
     System.out.println(sum);
   }
-
 }

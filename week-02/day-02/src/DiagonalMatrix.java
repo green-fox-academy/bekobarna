@@ -8,37 +8,34 @@
 //
 // - Print this two dimensional array to the output
 
+import java.util.Scanner;
+
 public class DiagonalMatrix {
     public static void main(String[] args) {
-        int matrix [][] = new int [4][4];
+        System.out.println("How big of a matrix do you want?");
+        Scanner scan = new Scanner(System.in);
+        int size = scan.nextInt();
 
+        int matrix [][] = new int[size][size];
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++){
-                if (i == 0){
-                    System.out.println(1);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++){
+                if (j == i){
+                    matrix[i][j] = 1;
                 } else {
-                    System.out.println(0);
+                    matrix[i][j] = 0;
                 }
             }
-                if (i == 0){
-                System.out.println(1);
-            } else {
-                System.out.println(0);
+        }
+
+        for (int i = 0; i < size; i++) {
+           for (int j = 0; j < size; j++) {
+                System.out.println(matrix[i][j] + " ");
             }
+            System.out.println(" 3");
+        }
     }
 }
-}
-
-   /* int[] af = {4, 5, 6, 7};
-        for (int i = 0; i < af.length; i++) {
-        System.out.println(af[i] + " ");
-
-    }*/
-
-
-
-
 
 
 /*import java.util.Arrays;
