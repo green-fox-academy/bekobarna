@@ -8,7 +8,7 @@ import java.util.*;
 public class QuoteSwap{
     public static void main(String... args){
         ArrayList<String> list = new ArrayList<String>(
-            BanasArrays.asList("What", "I", "do", "create,", "I", "cannot", "not", "understand."));
+            Arrays.asList("What", "I", "do", "create,", "I", "cannot", "not", "understand."));
 //      ArrayList<String> correctList = new ArrayList<String>(BanasArrays.asList("What", "I", "cannot", "create,", "I", "do", "not", "understand."));
 
         list.add(2,list.get(5));
