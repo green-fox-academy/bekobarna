@@ -15,14 +15,20 @@ import java.util.Scanner;
 
 public class Printer {
     public static void main(String[] args) {
-        System.out.println(printer(printer("")));
-
-    }
-
-    public static String printer (String input) {
+        System.out.println("Please write a word here: ");
         Scanner scan = new Scanner(System.in);
-        String  line = scan.nextLine();
-        return input;
+        String word = scan.nextLine();
+
+        String[] words = {"one", "two", "three", "four", "..."};
+        System.out.println(printer(words));
+
     }
 
+    static String printer (String [] input) {
+        String wordsAll = "";
+        for (int i = 0; i < input.length; i++) {
+            wordsAll += input[i] + "\n";
+        }
+        return wordsAll;
+    }
 }
