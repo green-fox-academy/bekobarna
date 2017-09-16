@@ -21,42 +21,40 @@ public class Calculator {
     System.out.println("Please type in the expression:");
     Scanner scan = new Scanner(System.in);
     String operation = scan.nextLine();
-    int num1 = scan.nextInt();
-    int num2 = scan.nextInt();
+    double num1 = scan.nextDouble();
+    double num2 = scan.nextDouble();
 
-    if (operation == "+") {
-
-    } else if (operation == "-") {
-
-    } else if (operation == "*") {
-
-    } else if (operation == "/") {
-
-    } else if (operation == "%") {
-
+    if (operation.equals("+")) {
+      System.out.println(addition(num1, num2));
+    } else if (operation.equals("-")) {
+      System.out.println(subtraction(num1, num2));
+    } else if (operation.equals("*")) {
+      System.out.println(multiplication(num1, num2));
+    } else if (operation.equals("/")) {
+      System.out.println(division(num1, num2));
+    } else if (operation.equals("%")) {
+      System.out.println(remainder(num1, num2));
     }
-
   }
 
-
-  public static int addition (int num1, int num2) {
-    
+  public static double addition (double num1, double num2) {
+    return (num1 + num2);
   }
 
-  public static int subtraction (int num1, int num2) {
-
+  public static double subtraction (double num1, double num2) {
+    return (num1 - num2);
   }
 
-  public static int multiplication (int num1, int num2) {
-
+  public static double multiplication (double num1, double num2) {
+    return (num1 * num2);
   }
 
-  public static int division (int num1, int num2) {
-
+  public static double division (double num1, double num2) {
+    return (num1 / num2);
   }
 
-  public static int remainder (int num1, int num2) {
-
+  public static double remainder (double num1, double num2) {
+    return (num1 % num2);
   }
 
 }
