@@ -5,13 +5,21 @@
 public class Reverse {
     public static void main(String... args){
         String reversed = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI";
+        System.out.println(reverseFunction(reversed));
+    }
 
-        for (int i = reversed.length() - 1; i >= 0 ; i--) {
-            char result = reversed.charAt(i);
-            System.out.print(result);
+    public static String reverseFunction (String line){
+        String end = "";
+        for (int i = line.length() - 1; i >= 0 ; i--) {
+            char result = line.charAt(i);
+            end += Character.toString(result);
         }
-        /*StringBuilder quote = new StringBuilder(reversed);
-        quote = quote.reverse();
-        System.out.println(quote);*/
+        return end;
     }
 }
+
+
+
+    /*StringBuilder quote = new StringBuilder(reversed);
+    quote = quote.reverse();
+    System.out.println(quote);*/
