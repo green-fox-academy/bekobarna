@@ -8,14 +8,10 @@ public class Reverse {
 
         for (int i = reversed.length() - 1; i >= 0 ; i--) {
             char result = reversed.charAt(i);
-            System.out.println(result);
+            System.out.print(result);
         }
+        /*StringBuilder quote = new StringBuilder(reversed);
+        quote = quote.reverse();
+        System.out.println(quote);*/
     }
 }
-
-
-/*       for (String part : reversed.split(" ")) {
-               System.out.print(new StringBuilder(part).reverse().toString());
-               System.out.print(" ");
-               }*/
-
