@@ -24,4 +24,3 @@ public class WriteSingleLine {
     File file = new File("my-file.txt");
   }
 }
-
