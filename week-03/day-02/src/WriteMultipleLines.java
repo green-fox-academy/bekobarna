@@ -37,7 +37,6 @@ public class WriteMultipleLines {
       Path filePath = Paths.get(path);
       Files.write(filePath, content);
     } catch (Exception e) {
-      System.out.println("Unable to write file: my-file.txt");
     }
     File file = new File(path);
     return file;
