@@ -9,18 +9,18 @@ public class Doubled {
     public static void main(String[] args) {
         try {
             Path filePath = Paths.get("duplicated-chars.txt");
-            List<String> duplicateLines = Files.readAllLines(filePath);
+            List<String> lines = Files.readAllLines(filePath);
 
-            String[] array = duplicateLines.toArray(new String[duplicateLines.size()]);
-
-            String stringFull = array.toString();
-            StringBuilder sb = new StringBuilder(stringFull);
-
-            for (int i = 0; i < sb.length(); i += 2) {
-                sb.deleteCharAt(i);
+            for (int i = 0; i < lines.size(); i++) {
+                lines.get(i);
+                for (int j = 0; j < (lines.get(i)).length(); j++) {
+                    lines.get(j);
+                    System.out.println(lines.get(j));
+                }
+                System.out.println("");
             }
 
-           
+
         } catch (Exception e) {
             System.out.println("error");
         }
