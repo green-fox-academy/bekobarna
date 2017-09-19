@@ -2,3 +2,10 @@
 // It should take the filenames as parameters
 // It should return a boolean that shows if the copy was successful
 
+public class CopyFile {
+  public static void main(String[] args) {
+
+  
+  }
+}
+
