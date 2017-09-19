@@ -12,20 +12,21 @@ import java.util.List;
 
 public class CountLines {
   public static void main(String[] args) {
-
+    numberOfLines("my-file.txt");
     }
-  }
 
   public static String numberOfLines (String fileName){
     Path filePath = Paths.get("my-file.txt");
+    int count = 0;
     try {
       List<String> myList = Files.readAllLines(filePath);
+      for (int i = 0; i < myList.size(); i++) {
+        count += i;
+      }
     } catch (IOException e) {
       System.out.println(0);
     }
-    return ;
+    return fileName;
 
   }
-
-
 }
