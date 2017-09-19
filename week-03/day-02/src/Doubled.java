@@ -1,6 +1,5 @@
 // Create a method that decrypts the duplicated-chars.txt
 
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.Files;
@@ -14,14 +13,17 @@ public class Doubled {
 
             String[] array = duplicateLines.toArray(new String[duplicateLines.size()]);
 
-            for(int i = 0; i < duplicateLines.size();i += 2)
-                System.out.println(duplicateLines.get(i));
+            String stringFull = array.toString();
+            StringBuilder sb = new StringBuilder(stringFull);
 
+            for (int i = 0; i < sb.length(); i += 2) {
+                sb.deleteCharAt(i);
+            }
+
+           
         } catch (Exception e) {
-            System.out.println("Uh-oh, could not read the file!");
+            System.out.println("error");
         }
-
-
 
     }
 }
