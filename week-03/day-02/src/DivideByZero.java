@@ -3,17 +3,19 @@
 // and prints the result.
 // it should print "fail" if the parameter is 0
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
+
 
 public class DivideByZero {
   public static void main(String[] args) {
-
-
-
-
-      }
-
-
+    System.out.println("Please write a number here:");
+    Scanner scan = new Scanner(System.in);
+    int number = scan.nextInt();
+    try {
+      int numDivided = 10 / number;
+      System.out.println(numDivided);
+    } catch (ArithmeticException e) {
+      System.out.println("fail");
+    }
+  }
 }
