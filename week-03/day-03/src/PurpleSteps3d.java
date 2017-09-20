@@ -9,8 +9,17 @@ public class PurpleSteps3d {
     public static void mainDraw(Graphics graphics){
       // reproduce this:
       // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
+        int size = 10;
+        int coordinate = 10;
+        for (int i = 0; i < 6; i++) {
+            graphics.setColor(new Color(176, 78, 240));
+            graphics.fillRect(coordinate, coordinate, size, size);
+            graphics.setColor(new Color(0, 0, 0));
+            graphics.drawRect(coordinate, coordinate, size, size);
+            size = size * 2;
+            coordinate = coordinate * 2;
 
-
+        }
 
     }
 

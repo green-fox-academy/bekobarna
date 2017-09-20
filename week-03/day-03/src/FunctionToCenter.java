@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import javax.swing.*;
 
 import java.awt.*;
@@ -12,7 +13,21 @@ public class FunctionToCenter {
       // and draws a line from that point to the center of the canvas.
       // fill the canvas with lines from the edges, every 20 px, to the center.
 
+        lineDraw(graphics);
 
+    }
+
+    public static void lineDraw(Graphics graphics){
+        int startX = 0;
+        int startY = 0;
+
+        for (int i = 0; i < 18; i++) {
+            graphics.drawLine(startX + 20, startY , WIDTH/2, HEIGHT/2);
+            startX = startX + 20;
+            startY = startY + 20;
+        }
+
+        /*graphics.drawLine(startPoint, endPoint, WIDTH/2, HEIGHT/2);*/
 
     }
 
