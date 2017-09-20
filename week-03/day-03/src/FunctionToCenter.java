@@ -22,8 +22,12 @@ public class FunctionToCenter {
         int startY = 0;
 
         for (int i = 0; i < 18; i++) {
-            graphics.drawLine(startX + 20, startY , WIDTH/2, HEIGHT/2);
-            startX = startX + 20;
+            int red = (int) (Math.random( )*256);
+            int green = (int) (Math.random() * 256);
+            int blue = (int) (Math.random() * 256);
+            Color randomColor = new Color(red, green, blue);
+            graphics.setColor(randomColor);
+            graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
             startY = startY + 20;
         }
 
