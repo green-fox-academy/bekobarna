@@ -12,36 +12,22 @@ public class LinePlay {
         Color purple = new Color(176, 78, 240);
         Color green = new Color(68, 211, 81);
         int startX = 20;
-        int startY = 0;
-        int endX = 0;
         int endY = 0;
-
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 30; i++) {
             graphics.setColor(purple);
             graphics.drawLine(startX, 0 , WIDTH, endY);
-            startX = startX + 20;
-            endY = endY + 25;
-
+            startX = startX + 10;
+            endY = endY + 10;
         }
 
-        /*for (int i = 0; i < 14; i++) {
-            graphics.setColor(purple);
-            graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
-            startY = startY + 20;
-        }
-
-        for (int i = 0; i < 14; i++) {
+        int startY = HEIGHT - 10;
+        int endX = WIDTH - 10;
+        for (int i = 0; i < 30; i++) {
             graphics.setColor(green);
-            graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
-            startY = startY + 20;
+            graphics.drawLine(0, startY , endX, HEIGHT);
+            endX = endX - 10;
+            startY = startY - 10;
         }
-
-        for (int i = 0; i < 14; i++) {
-            graphics.setColor(green);
-            graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
-            startY = startY + 20;
-        }*/
-
     }
 
 //    Don't touch the code below
