@@ -24,7 +24,7 @@ public class CenterBoxFunction {
         Scanner scan = new Scanner(System.in);
         int size = scan.nextInt();
 
-        graphics.drawRect((WIDTH/2), (HEIGHT/2), size, size);
+        graphics.drawRect(((WIDTH/2) - (size/2)), ((HEIGHT/2) - (size/2)), size, size);
     }
 
 //    Don't touch the code below
