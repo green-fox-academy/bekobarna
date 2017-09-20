@@ -10,7 +10,15 @@ public class PurpleSteps {
       // reproduce this:
       // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
 
+        for (int i = 0; i < 19; i++) {
+            Color color = new Color(176, 78, 240);
+            graphics.setColor(color);
+            graphics.fillRect((10 + (10 * i)) ,(10 + (10 * i)) , 10, 10);
+            color = new Color(0, 0, 0);
+            graphics.setColor(color);
+            graphics.drawRect((10 + (10 * i)) ,(10 + (10 * i)) , 10, 10);
 
+        }
 
     }
 
