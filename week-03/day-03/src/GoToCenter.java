@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import javax.swing.*;
 
 import java.awt.*;
@@ -12,11 +13,21 @@ public class GoToCenter {
       // and draws a line from that point to the center of the canvas.
       // draw 3 lines with that function.
 
-
-
+        for (int i = 0; i < 3; i++) {
+            lineDraw(graphics);
+        }
     }
 
-//    Don't touch the code below
+    public static void lineDraw(Graphics graphics){
+        System.out.println("Please write the starting numbers here:");
+        Scanner scan = new Scanner(System.in);
+        int startPoint = scan.nextInt();
+        int endPoint = scan.nextInt();
+
+        graphics.drawLine(startPoint, endPoint, WIDTH/2, HEIGHT/2);
+
+    }
+    //    Don't touch the code below
     static int WIDTH = 320;
     static int HEIGHT = 343;
 
