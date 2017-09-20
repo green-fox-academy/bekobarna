@@ -14,8 +14,6 @@ public class CenteredSquare {
 
         graphics.setColor(Color.GREEN);
         graphics.fillPolygon(xPoints, yPoints, 4);
-
-
     }
 
 //    Don't touch the code below
