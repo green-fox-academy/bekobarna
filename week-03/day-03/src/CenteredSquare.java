@@ -13,7 +13,8 @@ public class CenteredSquare {
         int yPoints[] = {((HEIGHT/2) - 5), ((HEIGHT/2) - 5), ((HEIGHT/2) + 5), ((HEIGHT/2) + 5)};
 
         graphics.setColor(Color.GREEN);
-        graphics.fillPolygon(xPoints, yPoints, 4);
+        graphics.drawRect(((WIDTH/2) - 5), ((HEIGHT/2) - 5), 10,10);
+
     }
 
 //    Don't touch the code below
