@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import javax.swing.*;
 
 import java.awt.*;
@@ -11,9 +12,20 @@ public class PositionSquare {
       // the x and y coordinates of the square's top left corner
       // and draws a 50x50 square from that point.
       // draw 3 squares with that function.
+        for (int i = 0; i < 3; i++) {
+            squareDraw(graphics);
+        }
 
 
+    }
 
+    public static void squareDraw(Graphics graphics){
+        System.out.println("Please write the starting numbers here:");
+        Scanner scan = new Scanner(System.in);
+        int startPoint = scan.nextInt();
+        int endPoint = scan.nextInt();
+
+        graphics.drawRect(startPoint, endPoint, 50, 50);
     }
 
 //    Don't touch the code below
