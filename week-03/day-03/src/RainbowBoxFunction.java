@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import javax.swing.*;
 
 import java.awt.*;
@@ -14,6 +15,22 @@ public class RainbowBoxFunction {
 
 
 
+        for (int i = 0; i < (int) (Math.random( ) * 100000); i++) {
+            rainbowSquareDraw(graphics);
+        }
+
+    }
+
+    public static void rainbowSquareDraw(Graphics graphics){
+
+        int size = (int) (Math.random( )*100);
+        int red = (int) (Math.random( )*256);
+        int green = (int) (Math.random() * 256);
+        int blue = (int) (Math.random() * 256);
+        Color randomColor = new Color(red, green, blue);
+
+        graphics.setColor(randomColor);
+        graphics.fillRect(((WIDTH/2) - (size/2)), ((HEIGHT/2) - (size/2)), size, size);
     }
 
 //    Don't touch the code below
