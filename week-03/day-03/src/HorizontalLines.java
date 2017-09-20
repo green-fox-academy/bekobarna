@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import javax.swing.*;
 
 import java.awt.*;
@@ -12,8 +13,18 @@ public class HorizontalLines {
       // and draws a 50 long horizontal line from that point.
       // draw 3 lines with that function.
 
+        for (int i = 0; i < 3; i++) {
+            lineDraw(graphics);
+        }
+    }
 
+    public static void lineDraw(Graphics graphics){
+        System.out.println("Please write the starting numbers here:");
+        Scanner scan = new Scanner(System.in);
+        int startX = scan.nextInt();
+        int startY = scan.nextInt();
 
+        graphics.drawLine(startX, startY, (startX + 50) , startY);
     }
 
 //    Don't touch the code below
