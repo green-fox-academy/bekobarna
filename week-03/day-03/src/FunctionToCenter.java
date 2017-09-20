@@ -12,26 +12,50 @@ public class FunctionToCenter {
       // the x and y coordinates of the line's starting point
       // and draws a line from that point to the center of the canvas.
       // fill the canvas with lines from the edges, every 20 px, to the center.
-
         lineDraw(graphics);
-
     }
 
     public static void lineDraw(Graphics graphics){
         int startX = 0;
         int startY = 0;
 
-        for (int i = 0; i < 18; i++) {
-            int red = (int) (Math.random( )*256);
+        for (int i = 0; i < 20; i++) {
+            int red = (int) (Math.random( ) * 256);
             int green = (int) (Math.random() * 256);
             int blue = (int) (Math.random() * 256);
-            Color randomColor = new Color(red, green, blue);
-            graphics.setColor(randomColor);
+            graphics.setColor(new Color(red, green, blue));
             graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
             startY = startY + 20;
         }
 
-        /*graphics.drawLine(startPoint, endPoint, WIDTH/2, HEIGHT/2);*/
+        for (int i = 0; i < 20; i++) {
+            int red = (int) (Math.random( ) * 256);
+            int green = (int) (Math.random() * 256);
+            int blue = (int) (Math.random() * 256);
+            graphics.setColor(new Color(red, green, blue));
+            graphics.drawLine(startX, startY , WIDTH/2, HEIGHT/2);
+            startX = startX + 20;
+        }
+
+        int startX2 = WIDTH;
+        int startY2 = HEIGHT;
+        for (int i = 0; i < 20; i++) {
+            int red = (int) (Math.random( ) * 256);
+            int green = (int) (Math.random() * 256);
+            int blue = (int) (Math.random() * 256);
+            graphics.setColor(new Color(red, green, blue));
+            graphics.drawLine(startX2, startY2 , WIDTH/2, HEIGHT/2);
+            startY2 = startY2 - 20;
+        }
+
+        for (int i = 0; i < 20; i++) {
+            int red = (int) (Math.random( ) * 256);
+            int green = (int) (Math.random() * 256);
+            int blue = (int) (Math.random() * 256);
+            graphics.setColor(new Color(red, green, blue));
+            graphics.drawLine(startX2, startY2 , WIDTH/2, HEIGHT/2);
+            startX2 = startX2 - 20;
+        }
 
     }
 
