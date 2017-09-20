@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class StarryNight {
 
     public static void mainDraw(Graphics graphics){
       // draw the night sky:

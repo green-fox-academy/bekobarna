@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class CenterBoxFunction {
 
     public static void mainDraw(Graphics graphics){
       // create a square drawing function that takes 1 parameter:

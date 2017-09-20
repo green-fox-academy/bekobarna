@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class CenteredSquare {
 
     public static void mainDraw(Graphics graphics){
       // draw a green 10x10 square to the canvas' center.

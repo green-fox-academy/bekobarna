@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class Checkerboard {
 
     public static void mainDraw(Graphics graphics){
       // fill the canvas with a checkerboard pattern.

@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class PositionSquare {
 
     public static void mainDraw(Graphics graphics){
       // create a square drawing function that takes 2 parameters:

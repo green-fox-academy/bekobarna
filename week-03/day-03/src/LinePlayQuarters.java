@@ -4,7 +4,7 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Drawing {
+public class LinePlayQuarters {
 
     public static void mainDraw(Graphics graphics){
       // divide the canvas into 4 parts
