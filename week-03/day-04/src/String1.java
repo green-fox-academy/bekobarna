@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class String1 {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    System.out.println("Write me a string:");
+    System.out.println("Write me a word with x`s:");
     String inputString = scan.nextLine();
-    System.out.println(string(inputString));
 
+    System.out.println(string(inputString));
   }
 
   public static String string(String word) {
