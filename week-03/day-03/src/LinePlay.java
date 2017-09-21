@@ -20,7 +20,7 @@ public class LinePlay {
             endY = endY + 20;
         }
 
-        int startY = HEIGHT;git
+        int startY = HEIGHT;
         int endX = WIDTH;
         for (int i = 0; i < 17; i++) {
             graphics.setColor(green);

@@ -10,7 +10,28 @@ public class LinePlayQuarters {
       // divide the canvas into 4 parts
       // and repeat this pattern in each quarter:
       // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/line-play/r1.png]
+        Color purple = new Color(176, 78, 240);
+        Color green = new Color(68, 211, 81);
+        Color red = new Color (255, 0 ,0);
+        Color yellow = new Color (225, 225 ,21);
 
+        int startX = 0;
+        int endY = 0;
+        for (int i = 0; i < 30; i++) {
+            graphics.setColor(purple);
+            graphics.drawLine(startX, 0 , WIDTH, endY);
+            startX = startX + 10;
+            endY = endY + 10;
+        }
+
+        int startY = HEIGHT;
+        int endX = WIDTH;
+        for (int i = 0; i < 30; i++) {
+            graphics.setColor(green);
+            graphics.drawLine(0, startY , endX, HEIGHT);
+            endX = endX - 10;
+            startY = startY - 10;
+        }
 
 
     }
