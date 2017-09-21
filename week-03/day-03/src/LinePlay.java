@@ -11,22 +11,22 @@ public class LinePlay {
       // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/line-play/r1.png]
         Color purple = new Color(176, 78, 240);
         Color green = new Color(68, 211, 81);
-        int startX = 20;
+        int startX = 0;
         int endY = 0;
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 17; i++) {
             graphics.setColor(purple);
             graphics.drawLine(startX, 0 , WIDTH, endY);
-            startX = startX + 10;
-            endY = endY + 10;
+            startX = startX + 20;
+            endY = endY + 20;
         }
 
-        int startY = HEIGHT - 10;
-        int endX = WIDTH - 10;
-        for (int i = 0; i < 30; i++) {
+        int startY = HEIGHT;git
+        int endX = WIDTH;
+        for (int i = 0; i < 17; i++) {
             graphics.setColor(green);
             graphics.drawLine(0, startY , endX, HEIGHT);
-            endX = endX - 10;
-            startY = startY - 10;
+            endX = endX - 20;
+            startY = startY - 20;
         }
     }
 
