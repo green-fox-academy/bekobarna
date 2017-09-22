@@ -9,8 +9,8 @@ public class Circles {
     graphics.fillRect(0, 0, 1000, 1000);
     graphics.setColor(Color.BLACK);
 
-    int size = 500;
-    int n = 3;                  //not sure about the number
+    int size = 1000;
+    int n = 5;                  //not sure about the number
     int x = (WIDTH - size) / 3;
     int y = (HEIGHT - size) / 3;
 
@@ -27,45 +27,32 @@ public class Circles {
       return;
     }
 
-    graphics.setColor(Color.BLACK);
+    graphics.setColor(new Color(red, green, blue));
     graphics.drawOval(x , y , size, size);
 
-   /* graphics.setColor(new Color(red, green, blue));
-    graphics.drawOval(x + 17, y + size / 3  + 20, size / 2, size / 2);
-
     graphics.setColor(new Color(red, green, blue));
-    graphics.drawOval(x + 2 * size / 3 - 100, y + size / 3 + 20, size / 2, size / 2);*/
-
-    graphics.setColor(Color.RED);
     graphics.drawOval(x + size / 4, y, size / 2, size / 2);
 
-    graphics.setColor(Color.GREEN);
-    graphics.drawOval(x + size / 29, (int) (y + size / 2.69), size / 2, size / 2);
+    graphics.setColor(new Color(red, green, blue));
+    graphics.drawOval(x + size / 29, (int) (y + size / 2.71), size / 2, size / 2);
 
-    graphics.setColor(Color.ORANGE);
-    graphics.drawOval((int) (x + size / 2.14), (int) (y + size / 2.69), size / 2, size / 2);
+    graphics.setColor(new Color(red, green, blue));
+    graphics.drawOval((int) (x + size / 2.138), (int) (y + size / 2.69), size / 2, size / 2);
 
 
     drawCircle(graphics, x + size / 4, y, size / 2, n - 1);
-    drawCircle(graphics, (int) (x + (size / 28)), (int) (y + size / 2.70), size / 2, n - 1);
-    drawCircle(graphics, x + size / 4, y, size / 2, n - 1);
-
-    /*drawCircle(graphics, x , y, size / 2, n - 1);
-    drawCircle(graphics, x, y, size / 2, n - 1);*/
-
-    /*drawCircle(graphics, x + size / 3, y + size / 3, size / 3, n - 1);
-    drawCircle(graphics, x + 2 * size / 3, y + 2 * size / 3, size / 3, n - 1);*/
-
+    drawCircle(graphics, (int) (x + (size / 30.4)), (int) (y + size / 2.70), size / 2, n - 1);
+    drawCircle(graphics, (int) (x + (size / 2.14)), (int) (y + size / 2.70), size / 2, n - 1);
   }
 
 
   //    Don't touch the code below
-  static int WIDTH = 600;
-  static int HEIGHT = 600;
+  static int WIDTH = 1000;
+  static int HEIGHT = 1000;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(WIDTH, HEIGHT));
+    jFrame.setSize(new Dimension(WIDTH * 2, HEIGHT * 2));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);
