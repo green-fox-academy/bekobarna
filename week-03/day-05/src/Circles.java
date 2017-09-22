@@ -7,11 +7,10 @@ public class Circles {
   public static void mainDraw(Graphics graphics) {
     graphics.setColor(new Color(255, 255, 255));
     graphics.fillRect(0, 0, 1500, 800);
-    graphics.setColor(Color.BLACK);
 
-    int sizeRandom = (int) (Math.random( ) * 1000);        //random size
-    int size = sizeRandom;
-    int n = 10;                  //not sure about the number
+   // int sizeRandom = (int) (Math.random( ) * 1000);        //random size
+    int size = 800;
+    int n = 7;
     int x = (WIDTH - size) / 3;
     int y = (HEIGHT - size) / 3;
 
