@@ -10,7 +10,7 @@ public class Circles {
 
    // int sizeRandom = (int) (Math.random( ) * 1000);        //random size
     int size = 800;
-    int n = 7;
+    int n = 3;
     int x = (WIDTH - size) / 3;
     int y = (HEIGHT - size) / 3;
 
@@ -34,7 +34,7 @@ public class Circles {
     graphics.drawOval(x + size / 4, y, size / 2, size / 2);
 
     graphics.setColor(new Color(red, green, blue));
-    graphics.drawOval(x + size / 29, (int) (y + size / 2.71), size / 2, size / 2);
+    graphics.drawOval((int) (x + size / 31.5), (int) (y + size / 2.71), size / 2, size / 2);
 
     graphics.setColor(new Color(red, green, blue));
     graphics.drawOval((int) (x + size / 2.138), (int) (y + size / 2.69), size / 2, size / 2);

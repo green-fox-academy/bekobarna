@@ -13,11 +13,10 @@ public class Tree {
 
     int n = 7;
     int x = WIDTH / 2;
-    int y = HEIGHT / 2;
-    double angle = 50;
+    int y = 600;
+    double angle = 90;
 
     drawTree(graphics, x, y, angle, n);
-
   }
 
 
@@ -34,17 +33,17 @@ public class Tree {
     int x2 = x1 - (int) (Math.cos(Math.toRadians(angle)) * n * 20);
     int y2 = y1 - (int) (Math.sin(Math.toRadians(angle)) * n * 20);
     g.setColor(new Color(red, green, blue));
-    g.drawLine(x1, y1, x2, y2);
-    g.setColor(new Color(red, green, blue));
     g.drawLine(x1, y1, x1 + n, y1 + n);
+    g.setColor(new Color(red, green, blue));
+    g.drawLine(x1, y1, x2, y2);
+
 
     g.setColor(new Color(red, green, blue));
-    drawTree(g, x2, y2, angle - 40,  n - 1);
+    drawTree(g, x2, y2, angle - 45,  n - 1);
     g.setColor(new Color(red, green, blue));
-    drawTree(g, x2, y2, angle + 40,  n - 1);
+    drawTree(g, x2, y2, angle + 45,  n - 1);
     g.setColor(new Color(red, green, blue));
     drawTree(g, x2, y2,  angle ,  n - 1);
-
   }
 
 
