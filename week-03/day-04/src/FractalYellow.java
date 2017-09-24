@@ -1,4 +1,3 @@
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import javax.swing.*;
 import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
