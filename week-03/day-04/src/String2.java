@@ -4,10 +4,7 @@ import java.util.Scanner;
 
 public class String2 {
   public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Write me a word with x`s:");
-    String inputString = scan.nextLine();
-
+    String inputString = "Hello mr XxxxXXXXYZ, xxxxxxXXXXxxxxx.";
     System.out.println(string(inputString));
   }
 
@@ -15,7 +12,7 @@ public class String2 {
     if (word.contains("x") == false) {
       return word;
     }  else {
-      return string(word.replace("x", ""));
+      return string(word.replaceFirst("x", ""));
     }
   }
 }
