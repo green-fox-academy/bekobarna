@@ -9,34 +9,30 @@ public class FractalYellow {
     graphics.setColor(Color.YELLOW);
     graphics.fillRect(0, 0, 1000, 1000);
     graphics.setColor(Color.BLACK);
-
-
-    int size = 450;
+    /*int sizeRandom = (int) (Math.random( ) * 1000);                  //random size
+    int size = sizeRandom;*/
+    int size = 500;
     int n = 4;                              //level of deepness
     int x = (WIDTH - size) / 2;
     int y = (HEIGHT - size) / 2;
-
     squareDraw(graphics, x, y, size, n);
     }
 
 
   static void squareDraw(Graphics graphics, int x, int y, int size, int n){
-
       if (n < 1){
         return;
       }
+      graphics.drawRect(x , y , size, size);
+      graphics.drawRect(x + size / 3, y, size / 3, size / 3);
+      graphics.drawRect(x, y + size / 3 , size / 3, size / 3);
+      graphics.drawRect(x + size / 3, y + size * 2 / 3, size / 3, size / 3);
+      graphics.drawRect(x + size * 2 / 3, y +  size / 3, size / 3, size / 3);
 
-    graphics.drawRect(x , y , size, size);
-    graphics.drawRect(x + size / 3, y, size / 3, size / 3);
-    graphics.drawRect(x, y + size / 3 , size / 3, size / 3);
-    graphics.drawRect(x + size / 3, y + size * 2 / 3, size / 3, size / 3);
-    graphics.drawRect(x + size * 2 / 3, y +  size / 3, size / 3, size / 3);
-
-    squareDraw(graphics, x + size / 3, y, size / 3, n - 1);
-    squareDraw(graphics, x + size * 2 / 3, y + size / 3, size / 3, n - 1);
-    squareDraw(graphics, x, y + size / 3, size / 3, n - 1);
-    squareDraw(graphics, x + size / 3, y + size * 2 / 3, size / 3, n - 1);
-
+      squareDraw(graphics, x + size / 3, y, size / 3, n - 1);
+      squareDraw(graphics, x + size * 2 / 3, y + size / 3, size / 3, n - 1);
+      squareDraw(graphics, x, y + size / 3, size / 3, n - 1);
+      squareDraw(graphics, x + size / 3, y + size * 2 / 3, size / 3, n - 1);
   }
 
 
