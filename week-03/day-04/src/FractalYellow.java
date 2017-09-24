@@ -6,13 +6,13 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class FractalYellow {
 
     public static void mainDraw(Graphics graphics) {
-    graphics.setColor(new Color(254, 249, 53));
+    graphics.setColor(Color.YELLOW);
     graphics.fillRect(0, 0, 1000, 1000);
     graphics.setColor(Color.BLACK);
 
 
     int size = 450;
-    int n = 4;                  //not sure about the number
+    int n = 4;                              //level of deepness
     int x = (WIDTH - size) / 2;
     int y = (HEIGHT - size) / 2;
 
@@ -30,13 +30,12 @@ public class FractalYellow {
     graphics.drawRect(x + size / 3, y, size / 3, size / 3);
     graphics.drawRect(x, y + size / 3 , size / 3, size / 3);
     graphics.drawRect(x + size / 3, y + size * 2 / 3, size / 3, size / 3);
-    graphics.drawRect(x + size * 2 / 3, y +  size / 3, size / 3, size /3);
+    graphics.drawRect(x + size * 2 / 3, y +  size / 3, size / 3, size / 3);
 
-    squareDraw(graphics, size / 3, y, size / 3, n - 1);
-    squareDraw(graphics, size / 3, y + size * 2 / 3, size / 3, n - 1);
-    squareDraw(graphics, x / 3, y + size / 3, size / 3, n - 1);
+    squareDraw(graphics, x + size / 3, y, size / 3, n - 1);
     squareDraw(graphics, x + size * 2 / 3, y + size / 3, size / 3, n - 1);
-
+    squareDraw(graphics, x, y + size / 3, size / 3, n - 1);
+    squareDraw(graphics, x + size / 3, y + size * 2 / 3, size / 3, n - 1);
 
   }
 
