@@ -10,7 +10,7 @@ public class Circles {
       /*int sizeRandom = (int) (Math.random( ) * 1000);                  //random size
       int size = sizeRandom;*/
       int size = 700;                                                    // fix size
-      int n = 5;                                                         // how deep do you want to go?
+      int n = 4;                                                         // how deep do you want to go?
       int x = (WIDTH - size) / 2;
       int y = (HEIGHT - size) / 4;
       drawCircle(graphics, x, y, size, n);
