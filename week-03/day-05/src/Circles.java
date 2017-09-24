@@ -7,33 +7,29 @@ public class Circles {
   public static void mainDraw(Graphics graphics) {
       graphics.setColor(new Color(255, 255, 255));
       graphics.fillRect(0, 0, 1500, 800);
-     /* int sizeRandom = (int) (Math.random( ) * 1000);                 //random size
+      /*int sizeRandom = (int) (Math.random( ) * 1000);                  //random size
       int size = sizeRandom;*/
-      int size = 900;                                                    // fix size
-      int n = 2;                                                     // how deep do you want to go?
+      int size = 700;                                                    // fix size
+      int n = 5;                                                         // how deep do you want to go?
       int x = (WIDTH - size) / 2;
-      int y = (HEIGHT - size) / 2;
+      int y = (HEIGHT - size) / 4;
       drawCircle(graphics, x, y, size, n);
   }
 
   static void drawCircle(Graphics graphics, int x, int y, int size, int n){
-      int red = (int) (Math.random( ) * 256);                 // random colors
-      int green = (int) (Math.random() * 256);                // random colors
-      int blue = (int) (Math.random() * 256);                 // random colors
-
-      if (n < 1){
+            if (n < 1){
         return;
       }
-        graphics.setColor(new Color(red, green, blue));
+        graphics.setColor(new Color((int) (Math.random( ) * 256), (int) (Math.random( ) * 256), (int) (Math.random( ) * 256)));
         graphics.drawOval(x , y , size, size);
 
-        graphics.setColor(new Color(red, green, blue));
+        graphics.setColor(new Color((int) (Math.random( ) * 256), (int) (Math.random( ) * 256), (int) (Math.random( ) * 256)));
         graphics.drawOval(x + size / 4, y, size / 2, size / 2);
 
-        graphics.setColor(new Color(red, green, blue));
+        graphics.setColor(new Color((int) (Math.random( ) * 256), (int) (Math.random( ) * 256), (int) (Math.random( ) * 256)));
         graphics.drawOval((int) (x + size / 31.5), (int) (y + size / 2.71), size / 2, size / 2);
 
-        graphics.setColor(new Color(red, green, blue));
+        graphics.setColor(new Color((int) (Math.random( ) * 256), (int) (Math.random( ) * 256), (int) (Math.random( ) * 256)));
         graphics.drawOval((int) (x + size / 2.138), (int) (y + size / 2.69), size / 2, size / 2);
 
         drawCircle(graphics, x + size / 4, y, size / 2, n - 1);
