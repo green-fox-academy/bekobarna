@@ -8,7 +8,7 @@ public class Sharpie {
         this.color = inputColor;
     }
 
-    public Sharpie (Float widthInput) {
+    public Sharpie(String orange, Float widthInput) {
         this.width = widthInput;
     }
 
@@ -18,18 +18,5 @@ public class Sharpie {
 
     public void use () {
         this.inkAmount -= 1.0f;
-    }
-
-
-    public static void main(String[] args) {
-        Sharpie toll = new Sharpie();
-        toll.use();
-        toll.use();
-        toll.use();
-        toll.use();
-        toll.use();
-
-        System.out.println(toll.inkAmount);
-
     }
 }
