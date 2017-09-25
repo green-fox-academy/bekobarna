@@ -24,6 +24,6 @@ public class PostIt {
         System.out.println(Idea1.backgroundColor +  " " + Idea1.text +  " " + Idea1.textColor);
         System.out.println(Awesome.backgroundColor +  " " + Awesome.text +  " "  + Awesome.textColor);
         System.out.println(SuperB.backgroundColor +  " " + SuperB.text +  " " + SuperB.textColor);
-        
+
     }
 }
