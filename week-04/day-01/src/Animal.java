@@ -29,7 +29,4 @@ public class Animal {
         System.out.println(teve.thirst);
 
     }
-
-
-
 }
