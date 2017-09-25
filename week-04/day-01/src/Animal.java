@@ -4,29 +4,29 @@ public class Animal {
     int thirst;
 
     public Animal () {
-        hunger = 50;
-        thirst = 50;
+        this.hunger = 50;
+        this.thirst = 50;
     }
 
-    public int eat () {
-        hunger =- 1;
-        return hunger;
+    public void eat () {
+        hunger -= 1;
     }
 
-    public int drink () {
-        thirst =- 1;
-        return thirst;
+    public void drink () {
+        thirst -= 1;
     }
 
-    public int play () {
-        thirst += 1;
-        hunger += 1;
-        return thirst + hunger;
+    public void play () {
+        this.thirst += 1;
+        this.hunger += 1;
+
     }
 
     public static void main(String[] args) {
         Animal teve = new Animal();
-        System.out.println(teve.hunger);
+        teve.drink();
+        teve.drink();
+        System.out.println(teve.thirst);
 
     }
 

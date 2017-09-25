@@ -4,13 +4,20 @@ public class Sharpie {
     Float width;
     Float inkAmount;
 
-    public Sharpie () {
-        inkAmount = 100.0f;
+    public Sharpie (String inputColor) {
+        this.color = inputColor;
     }
 
-    public Float use () {
-        inkAmount = inkAmount - 1.0f;
-        return inkAmount;
+    public Sharpie (Float widthInput) {
+        this.width = widthInput;
+    }
+
+    public Sharpie () {
+        this.inkAmount = 100.0f;
+    }
+
+    public void use () {
+        this.inkAmount -= 1.0f;
     }
 
 
