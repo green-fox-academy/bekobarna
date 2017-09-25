@@ -1,27 +1,30 @@
+// You have the list of Dominoes
+// Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
+// eg: [2, 4], [4, 3], [3, 5] ...
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Dominoes {
     public static void main(String[] args) {
         List<Domino> dominoes = initializeDominoes();
-        // You have the list of Dominoes
-        // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
-        // eg: [2, 4], [4, 3], [3, 5] ...
-        for (int i = 0; i < dominoes.size(); i++) {
 
-            for (int j = 0; j < i; j++) {
-                dominoes.get(i);
+        for (int i = 0; i < dominoes.size() - 1; i++) {
+            for (int j = 0; j < dominoes.size(); j++) {
+                if (dominoes.get(i).getValues()[1] == dominoes.get(j).getValues()[0]) {
+                    Domino temp = dominoes.get(i + 1);
+                    dominoes.set(i + 1, dominoes.get(j));
+                    dominoes.set(j, temp);
+                    i++;
+                    j = i + 1;
+                }
             }
-            
-            dominoes.get(i);
+        }
 
-
-
-            }
 
         System.out.println(dominoes);
     }
+
 
     static List<Domino> initializeDominoes() {
         List<Domino> dominoes = new ArrayList<>();
