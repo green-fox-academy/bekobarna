@@ -9,11 +9,13 @@ public class Animal {
     }
 
     public int eat () {
-        return hunger - 1;
+        hunger =- 1;
+        return hunger;
     }
 
     public int drink () {
-        return thirst - 1;
+        thirst =- 1;
+        return thirst;
     }
 
     public int play () {
