@@ -5,9 +5,4 @@ public class Student {
     public void question (Teacher teacher) {
         teacher.answer();
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }
