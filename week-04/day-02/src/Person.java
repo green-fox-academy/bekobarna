@@ -3,16 +3,17 @@ public class Person {
     int age;
     String gender;
 
-    public Person() {
-        name = "Jane doe";
-        age = 30;
-        gender = "female";
-    }
 
     public Person (String name, int age, String gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
+    }
+
+    public Person() {
+        name = "Jane Doe";
+        age = 30;
+        gender = "female";
     }
 
     public void introduce () {
