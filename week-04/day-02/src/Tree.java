@@ -1,22 +1,22 @@
-public class Tree {
-    String color;
-    int currentWater;
-    boolean thirst;
+public class Tree extends Garden {
 
     public Tree(String color, int currentWater) {
         this.color = color;
         this.currentWater = currentWater;
     }
 
-    public void thirsty () {
+    public void status() {
         if (currentWater < 10) {
-            thirst = true;
+            System.out.println("The " + color + " Tree needs water");
+        } else {
+            System.out.println("The " + color + " Tree doesn`t need water");
         }
     }
 
-    /*public void watering (int waterInput) {
-        System.out.println("Watering with " + waterInput);
-        currentWater +=waterInput;
-    }*/
+    public void wateringTree (int wateringAmount) {
+        if (currentWater < 10) {
+            currentWater += (wateringAmount * 0.4);
+        }
+    }
 
 }
