@@ -4,7 +4,6 @@ public class PallidaClass {
     String className;
     ArrayList<Student> students;
     ArrayList<Mentor> mentors;
-    ArrayList<Sponsor> sponsors;
 
     public void addStudent (Student student) {
         students.add(student);
@@ -13,10 +12,6 @@ public class PallidaClass {
     public void addMentor (Mentor mentor) {
         mentors.add(mentor);
     }
-
-   /* public void addSponsor (Sponsor sponsor) {
-        sponsors.add(sponsor);
-    }*/
 
     public PallidaClass(String className) {
         this.className = className;
