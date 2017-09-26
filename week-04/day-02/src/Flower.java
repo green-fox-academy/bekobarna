@@ -1,11 +1,7 @@
 public class Flower {
-
     String color;
     int currentWater;
     boolean thirst;
-
-    public Flower() {
-    }
 
     public Flower(String color, int currentWater) {
         this.color = color;
@@ -18,5 +14,9 @@ public class Flower {
         }
     }
 
+    /*public void watering (int waterInput) {
+        System.out.println("Watering with " + waterInput);
+        currentWater +=waterInput;
+    }*/
 
 }

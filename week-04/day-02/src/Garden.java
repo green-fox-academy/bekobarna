@@ -1,37 +1,30 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class Garden {
-    String color;
+public class Garden extends Tree {
     int currentWater;
-    boolean thirst;
     int wateringAmount;
 
-    static ArrayList<Tree> trees = new ArrayList<>();
-    static ArrayList<Flower> flowers = new ArrayList<>();
+    static List<Tree> trees = new ArrayList<>();
+    static List<Flower> flowers = new ArrayList<>();
 
-
-    public void treeAdd (Tree tree) {
-        trees.add(tree);
+    public Garden(String color, int currentWater) {
+        super(color, currentWater);
     }
-
-    public void flowerAdd (Flower flower) {
-        flowers.add(flower);
-    }
-
 
 
     public void watering (int waterInput) {
         System.out.println("Watering with " + waterInput);
+        
 
 
 
+        wateringAmount = waterInput;
         currentWater +=waterInput;
-
     }
 
 
     public static void main(String[] args) {
-
 
         Flower yellow = new Flower("yellow", 10);
         flowers.add(yellow);
@@ -43,7 +36,26 @@ public class Garden {
         Tree orange = new Tree("orange", 34);
         trees.add(orange);
 
+        /*yellow.thirsty();
+        blue.thirsty();
+        purple.thirsty();
+        orange.thirsty();
 
+        if (yellow.thirst = true) {
+            yellow.watering(40);
+        }
+
+        if (blue.thirst = true) {
+            blue.watering(40);
+        }
+
+        if (purple.thirst = true) {
+            purple.watering(40);
+        }
+
+        if (orange.thirst = true) {
+            orange.watering(40);
+        }*/
 
     }
 

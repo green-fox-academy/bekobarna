@@ -3,10 +3,6 @@ public class Tree {
     int currentWater;
     boolean thirst;
 
-    public Tree() {
-    }
-
-
     public Tree(String color, int currentWater) {
         this.color = color;
         this.currentWater = currentWater;
@@ -18,5 +14,9 @@ public class Tree {
         }
     }
 
+    /*public void watering (int waterInput) {
+        System.out.println("Watering with " + waterInput);
+        currentWater +=waterInput;
+    }*/
 
 }
