@@ -18,5 +18,4 @@ public class Tree extends Garden {
             currentWater += (wateringAmount * 0.4);
         }
     }
-
 }

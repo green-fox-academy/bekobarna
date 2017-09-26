@@ -18,5 +18,4 @@ public class Flower extends Garden {
             currentWater += (wateringAmount * 0.75);
         }
     }
-
 }

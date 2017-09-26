@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garden {
-
     String color;
     int currentWater;
     static List<Tree> trees = new ArrayList<>();
@@ -58,9 +57,6 @@ public class Garden {
             trees.get(i).status();
             flowers.get(i).status();
         }
-
-
-
     }
 
 }
