@@ -6,12 +6,14 @@ import java.util.List;
  */
 public class Extension {
     int add(int a, int b) {
-        return 5;
+        return (a + b);
     }
 
     int maxOfThree(int a, int b, int c) {
         if (a > b)
             return a;
+        else if (b > c)
+            return b;
         else
             return c;
     }
