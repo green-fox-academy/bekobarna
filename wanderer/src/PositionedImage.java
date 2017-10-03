@@ -17,12 +17,11 @@ public class PositionedImage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void draw(Graphics graphics) {
         if (image != null) {
-            graphics.drawImage(image, posX, posY, null);
+            graphics.drawImage(image, posX * 72, posY * 72, null);
         }
     }
 }
