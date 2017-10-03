@@ -1,28 +1,30 @@
 public class Character {
-    int posX;
-    int posY;
+    int startPosX;
+    int startPosY;
     String type;
+    int amount;
 
-    public Character(int posX, int posY, String type) {
-        this.posX = posX;
-        this.posY = posY;
+    public Character(int startPosX, int startPosY, String type, int amount) {
+        this.startPosX = startPosX;
+        this.startPosY = startPosY;
         this.type = type;
+        this.amount = amount;
     }
 
-    public int getPosX() {
-        return posX;
+    public int getStartPosX() {
+        return startPosX;
     }
 
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public void setStartPosX(int startPosX) {
+        this.startPosX = startPosX;
     }
 
-    public int getPosY() {
-        return posY;
+    public int getStartPosY() {
+        return startPosY;
     }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
+    public void setStartPosY(int startPosY) {
+        this.startPosY = startPosY;
     }
 
     public String getType() {
@@ -31,5 +33,13 @@ public class Character {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getNumber() {
+        return amount;
+    }
+
+    public void setNumber(int number) {
+        this.amount = amount;
     }
 }

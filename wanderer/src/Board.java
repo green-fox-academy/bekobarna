@@ -8,12 +8,11 @@ public class Board extends JComponent {
     int posX;
     int posY;
     int mapSize;
-
+    Hero hero = new Hero();
     public Board() {
         mapSize = 720;
         setPreferredSize(new Dimension(mapSize, mapSize));
         setVisible(true);
-        setBounds(0, 0, 720, 720);
     }
 
     @Override
@@ -37,7 +36,7 @@ public class Board extends JComponent {
             {0, 0, 0, 1, 0, 1, 1, 0, 1, 0},     //10th row
         };
 
-        for (int i = 0; i < wallsArray.length; i++) {
+        for (int i = 0; i < wallsArray.length; i++) {                       //draw the board with tiles and walls
             for (int j = 0; j < wallsArray.length; j++) {
                 if (wallsArray[i][j] == 1) {
                     wall = new PositionedImage("assets/wall.png", j , i );
@@ -48,8 +47,6 @@ public class Board extends JComponent {
                 }
             }
         }
-        PositionedImage hero = new PositionedImage("assets/hero-down.png", posX, posY);
-        hero.draw(graphics);
     }
 
     public static void main(String[] args) {
@@ -60,11 +57,7 @@ public class Board extends JComponent {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.pack();
-        // Here is how you can add a key event listener
-        // The board object will be notified when hitting any key
-        // with the system calling one of the below 3 methods
         frame.addKeyListener(hero);
-
     }
 
 }
