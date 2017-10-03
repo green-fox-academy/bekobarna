@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -11,6 +12,19 @@ public class Board extends JComponent implements KeyListener {
     public Board() {
         testBoxX = 300;
         testBoxY = 300;
+
+        Integer[][] wallsArray = {
+            {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},     //1st row
+            {0, 0, 0, 1, 0, 1, 0, 1, 1, 0},     //2nd row
+            {0, 1, 1, 1, 0, 1, 0, 1, 1, 0},     //3rd row
+            {0, 0, 0, 0, 0, 1, 0, 0, 0, 0},     //4th row
+            {1, 1, 1, 1, 0, 1, 1, 1, 1, 0},     //5th row
+            {0, 1, 0, 1, 0, 0, 0, 0, 1, 0},     //6th row
+            {0, 1, 0, 1, 0, 1, 1, 0, 1, 0},     //7th row
+            {0, 0, 0, 0, 0, 1, 1, 0, 1, 0},     //8th row
+            {0, 1, 1, 1, 0, 0, 0, 0, 1, 0},     //9th row
+            {0, 0, 0, 1, 0, 1, 1, 0, 1, 0},     //10th row
+        };
 
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 720));
@@ -35,6 +49,14 @@ public class Board extends JComponent implements KeyListener {
             tile = new PositionedImage("assets/floor.png", testBoxX, testBoxY);
             tile.draw(graphics);
         }
+
+
+
+
+
+        PositionedImage wall = new PositionedImage("assets/wall.png", 210, 0);
+        wall.draw(graphics);
+
         // here you have a 720x720 canvas
         // you can create and draw an image using the class below e.g.
         PositionedImage hero = new PositionedImage("assets/hero-down.png", 0, 0);
