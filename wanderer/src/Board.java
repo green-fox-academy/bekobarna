@@ -20,7 +20,6 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void paint(Graphics graphics) {
         super.paint(graphics);
-
         testBoxX = 0;
         testBoxY = 0;
         PositionedImage tile;
@@ -29,13 +28,13 @@ public class Board extends JComponent implements KeyListener {
             for (int x = 0; x < 10; x++) {
                 tile = new PositionedImage("assets/floor.png", testBoxX, testBoxY);
                 tile.draw(graphics);
-                testBoxY += 70;
+                testBoxX += 70;
             }
-            tile = new PositionedImage("assets/floor.png", testBoxX, 0);
+            testBoxY += 70;
+            testBoxX = 0;
+            tile = new PositionedImage("assets/floor.png", testBoxX, testBoxY);
             tile.draw(graphics);
-           /* testBoxX += 70;*/
         }
-
         // here you have a 720x720 canvas
         // you can create and draw an image using the class below e.g.
         PositionedImage hero = new PositionedImage("assets/hero-down.png", 0, 0);
