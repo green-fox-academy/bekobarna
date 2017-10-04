@@ -1,10 +1,36 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Hero extends Character implements KeyListener {
+public class Hero extends Character {
 
     public Hero() {
-        super(0, 0, 72, "hero");
+        super();
+        this.posX = 0;
+        this.posY = 0;
+        this.width = 72;
+        this.image = "assets/hero-down.png";
+    }
+
+
+
+   /* public void goUp (KeyEvent e) {
+        PositionedImage hero = new PositionedImage("assets/hero-up.png", posX , posY );
+        posY -= 72;
+    }
+
+    public void goDown (KeyEvent e) {
+        PositionedImage hero = new PositionedImage("assets/hero-down.png", posX , posY );
+        posY += 72;
+    }
+
+    public void goLeft (KeyEvent e) {
+        PositionedImage hero = new PositionedImage("assets/hero-right.png", posX , posY );
+        posX -= 72;
+    }
+
+    public void goRight (KeyEvent e) {
+        PositionedImage hero = new PositionedImage("assets/hero-left.png", posX , posY );
+        posX += 72;
     }
 
 
@@ -18,16 +44,17 @@ public class Hero extends Character implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            startPosY -= width;
-        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            startPosY += width;
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            startPosX += width;
-        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            startPosX -= width;
+        if (e.getKeyCode() == KeyEvent.VK_UP ) {
+            goUp(e);
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
+            goDown(e);
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
+            goRight(e);
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
+            goLeft(e);
         }
-    }
+
+    }*/
 
 }
 

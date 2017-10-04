@@ -1,6 +1,4 @@
-import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
-import java.awt.event.KeyListener;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +9,9 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.pack();
-        frame.addKeyListener(hero);
+        frame.setFocusable(true);
+        frame.addKeyListener(board);
+
     }
+
 }
