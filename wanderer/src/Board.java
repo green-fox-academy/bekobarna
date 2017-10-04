@@ -11,6 +11,7 @@ public class Board extends JComponent implements KeyListener {
     Skeleton skeleton1;
     Skeleton skeleton2;
     Skeleton skeleton3;
+    Hud hud;
 
     public Board() {
         hero = new Hero();
@@ -19,11 +20,12 @@ public class Board extends JComponent implements KeyListener {
         skeleton1 = new Skeleton();
         skeleton2 = new Skeleton();
         skeleton3 = new Skeleton();
+        hud = new Hud();
 
 
 
         this.mapSize = 720;
-        setPreferredSize(new Dimension(mapSize, mapSize));
+        setPreferredSize(new Dimension(mapSize, 880));
         setVisible(true);
     }
 
@@ -43,9 +45,9 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
-        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );                  //draw hero
+        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );             //draw hero
         heropic.draw(graphics);
-        PositionedImage bosspic = new PositionedImage(boss.image, 9 , 0 );             //draw boss
+        PositionedImage bosspic = new PositionedImage(boss.image, 9 , 0 );                  //draw boss
         bosspic.draw(graphics);
         PositionedImage skeleton1pic = new PositionedImage(skeleton1.image, 9 , 2 );      //draw skeleton1
         skeleton1pic.draw(graphics);
@@ -53,6 +55,16 @@ public class Board extends JComponent implements KeyListener {
         skeleton2pic.draw(graphics);
         PositionedImage skeleton3pic = new PositionedImage(skeleton3.image, 4 , 5 );      //draw skeleton3
         skeleton3pic.draw(graphics);
+
+        graphics.setColor(Color.WHITE);
+        graphics.fillRect(100, 725, 400, 60);
+        graphics.setColor(Color.BLACK);
+        graphics.setFont(new Font("Sans_Serif", Font.PLAIN, 18));
+        graphics.drawString(hud.heroStats(), 110, 760);
+
+
+
+
 
     }
 

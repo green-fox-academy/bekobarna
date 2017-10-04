@@ -14,6 +14,7 @@ public class Hero extends Character {
         this.maxHp = 20 + (3 * d6());
         this.dp = 2 * d6();
         this.sp = 5 + d6();
+        this.hp = this.maxHp;
         //      map = new Map();
     }
 
