@@ -1,14 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class Board extends JComponent {
 
     int posX;
     int posY;
     int mapSize;
-    Hero hero = new Hero();
+
+
     public Board() {
         mapSize = 720;
         setPreferredSize(new Dimension(mapSize, mapSize));
@@ -22,6 +21,7 @@ public class Board extends JComponent {
         posY = 0;
         PositionedImage tile;
         PositionedImage wall;
+        PositionedImage heropic;
 
         int[][] wallsArray = {
             {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},     //1st row
@@ -47,10 +47,13 @@ public class Board extends JComponent {
                 }
             }
         }
+        heropic = new PositionedImage("assets/hero-down.png", 0 , 0 );
+        heropic.draw(graphics);
+
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("RPG Game");
+    /*public static void main(String[] args) {
+        JFrame frame = new JFrame("Wanderer - The RPG Game");
         Board board = new Board();
         Hero hero = new Hero();
         frame.add(board);
@@ -58,6 +61,6 @@ public class Board extends JComponent {
         frame.setVisible(true);
         frame.pack();
         frame.addKeyListener(hero);
-    }
+    }*/
 
 }

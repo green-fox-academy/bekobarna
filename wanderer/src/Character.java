@@ -1,14 +1,14 @@
 public class Character {
     int startPosX;
     int startPosY;
+    int width;
     String type;
-    int amount;
 
-    public Character(int startPosX, int startPosY, String type, int amount) {
+    public Character(int startPosX, int startPosY, int width, String type) {
         this.startPosX = startPosX;
         this.startPosY = startPosY;
+        this.width = width;
         this.type = type;
-        this.amount = amount;
     }
 
     public int getStartPosX() {
@@ -27,19 +27,15 @@ public class Character {
         this.startPosY = startPosY;
     }
 
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public int getNumber() {
-        return amount;
-    }
-
-    public void setNumber(int number) {
-        this.amount = amount;
     }
 }
