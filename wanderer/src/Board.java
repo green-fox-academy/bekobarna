@@ -7,10 +7,21 @@ public class Board extends JComponent implements KeyListener {
     int mapSize;
     Hero hero;
     Map walls;
+    Boss boss;
+    Skeleton skeleton1;
+    Skeleton skeleton2;
+    Skeleton skeleton3;
 
     public Board() {
         hero = new Hero();
         walls = new Map();
+        boss = new Boss();
+        skeleton1 = new Skeleton();
+        skeleton2 = new Skeleton();
+        skeleton3 = new Skeleton();
+
+
+
         this.mapSize = 720;
         setPreferredSize(new Dimension(mapSize, mapSize));
         setVisible(true);
@@ -32,8 +43,17 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
-        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );      //draw hero
+        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );                  //draw hero
         heropic.draw(graphics);
+        PositionedImage bosspic = new PositionedImage(boss.image, 9 , 0 );             //draw boss
+        bosspic.draw(graphics);
+        PositionedImage skeleton1pic = new PositionedImage(skeleton1.image, 9 , 2 );      //draw skeleton1
+        skeleton1pic.draw(graphics);
+        PositionedImage skeleton2pic = new PositionedImage(skeleton2.image, 9 , 5 );      //draw skeleton2
+        skeleton2pic.draw(graphics);
+        PositionedImage skeleton3pic = new PositionedImage(skeleton3.image, 4 , 5 );      //draw skeleton3
+        skeleton3pic.draw(graphics);
+
     }
 
 

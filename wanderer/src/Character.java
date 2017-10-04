@@ -3,9 +3,10 @@ public class Character {
     int posY;
     String image;
     int level;
-    int hp;
-    int sp;
-    int dp;
+    double maxHp;
+    double hp;
+    double sp;
+    double dp;
 
     public int d6 () {
         int range = (6 - 1) + 1;
