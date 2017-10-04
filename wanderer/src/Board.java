@@ -5,8 +5,6 @@ import java.awt.*;
 
 public class Board extends JComponent implements KeyListener {
     int mapSize;
-    int posX;
-    int posY;
     Hero hero;
 
     public Board() {
@@ -19,8 +17,6 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void paint(Graphics graphics) {
         super.paint(graphics);
-        PositionedImage tile;
-        PositionedImage wall;
 
         int[][] wallsArray = {
             {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},     //1st row
@@ -38,16 +34,16 @@ public class Board extends JComponent implements KeyListener {
         for (int i = 0; i < wallsArray.length; i++) {                       //draw the board with tiles and walls
             for (int j = 0; j < wallsArray.length; j++) {
                 if (wallsArray[i][j] == 1) {
-                    wall = new PositionedImage("assets/wall.png", j , i );
+                    PositionedImage wall = new PositionedImage("assets/wall.png", j , i );
                     wall.draw(graphics);
                 } else if (wallsArray[i][j] == 0) {
-                    tile = new PositionedImage("assets/floor.png", j, i );
+                    PositionedImage tile = new PositionedImage("assets/floor.png", j, i );
                     tile.draw(graphics);
                 }
             }
         }
 
-        PositionedImage heropic = new PositionedImage("assets/hero-down.png", hero.posX , hero.posY );
+        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );
         heropic.draw(graphics);
 
     }
@@ -73,24 +69,10 @@ public class Board extends JComponent implements KeyListener {
             hero.image = "assets/hero-right.png";
             hero.posX ++;
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
-            hero.image = "assets/hero-right.png";
+            hero.image = "assets/hero-left.png";
             hero.posX --;
         }
         repaint();
     }
-
-
-    /*public static void main(String[] args) {
-        JFrame frame = new JFrame("Wanderer - The RPG Game");
-        Board board = new Board();
-        Hero hero = new Hero();
-        frame.add(board);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.pack();
-        frame.setFocusable(true);
-        frame.addKeyListener(board);
-
-    }*/
 
 }
