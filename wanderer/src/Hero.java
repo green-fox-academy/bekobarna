@@ -5,6 +5,10 @@ public class Hero extends Character {
         this.posX = 0;
         this.posY = 0;
         this.image = "assets/hero-down.png";
+        this.level = 1;
+        this.hp = 20 + (3 * (d6()));
+        this.sp = 5 + (d6());
+        this.dp = 2 * (d6());
     }
 
     public void goUp () {
@@ -45,7 +49,7 @@ public class Hero extends Character {
             hero.goLeft();
         }
         repaint();
-        */
+    */
 
 
 

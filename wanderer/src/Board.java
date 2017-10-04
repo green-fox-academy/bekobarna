@@ -6,11 +6,11 @@ import java.awt.*;
 public class Board extends JComponent implements KeyListener {
     int mapSize;
     Hero hero;
-    Wall walls;
+    Map walls;
 
     public Board() {
         hero = new Hero();
-        walls = new Wall();
+        walls = new Map();
         this.mapSize = 720;
         setPreferredSize(new Dimension(mapSize, mapSize));
         setVisible(true);
@@ -19,14 +19,14 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void paint(Graphics graphics) {
         super.paint(graphics);
-        int[][] wallsArray = walls.walls();
+        int[][] wallsArray = walls.mapOfWalls();
 
-        for (int i = 0; i < wallsArray.length; i++) {                       //draw the board with tiles and walls
+        for (int i = 0; i < wallsArray.length; i++) {                                      //draw the board with tiles and walls
             for (int j = 0; j < wallsArray.length; j++) {
-                if (wallsArray[i][j] == 1) {
+                if (walls.isItaAWall(i, j)) {
                     PositionedImage wall = new PositionedImage("assets/wall.png", j , i );
                     wall.draw(graphics);
-                } else if (wallsArray[i][j] == 0) {
+                } else {
                     PositionedImage tile = new PositionedImage("assets/floor.png", j, i );
                     tile.draw(graphics);
                 }
@@ -44,15 +44,23 @@ public class Board extends JComponent implements KeyListener {
     public void keyPressed(KeyEvent e) {
     }
     @Override
-    public void keyReleased(KeyEvent e) {                                                   //movement with hero
+    public void keyReleased(KeyEvent e) {                                                       //movement with hero
         if (e.getKeyCode() == KeyEvent.VK_UP ) {
-            hero.goUp();
+            if (hero.posY > 0 && !walls.isItaAWall(hero.posY - 1, hero.posX)) {
+                hero.goUp();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
-            hero.goDown();
+            if (hero.posY < 9 && !walls.isItaAWall(hero.posY + 1, hero.posX)) {
+                hero.goDown();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
-            hero.goRight();
+            if (hero.posX < 9 && !walls.isItaAWall(hero.posY, hero.posX + 1)) {
+                hero.goRight();
+            }
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
-            hero.goLeft();
+            if (hero.posX > 0 && !walls.isItaAWall(hero.posY, hero.posX - 1)) {
+                hero.goLeft();
+            }
         }
         repaint();
     }
