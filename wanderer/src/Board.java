@@ -21,9 +21,6 @@ public class Board extends JComponent implements KeyListener {
         skeleton2 = new Skeleton();
         skeleton3 = new Skeleton();
         hud = new Hud();
-
-
-
         this.mapSize = 720;
         setPreferredSize(new Dimension(mapSize, 880));
         setVisible(true);
@@ -45,6 +42,7 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
+
         PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );             //draw hero
         heropic.draw(graphics);
         PositionedImage bosspic = new PositionedImage(boss.image, 9 , 0 );                  //draw boss
@@ -56,15 +54,18 @@ public class Board extends JComponent implements KeyListener {
         PositionedImage skeleton3pic = new PositionedImage(skeleton3.image, 4 , 5 );      //draw skeleton3
         skeleton3pic.draw(graphics);
 
-        graphics.setColor(Color.WHITE);
+        graphics.setColor(Color.WHITE);                                                             // draw HUD
         graphics.fillRect(100, 725, 400, 60);
         graphics.setColor(Color.BLACK);
         graphics.setFont(new Font("Sans_Serif", Font.PLAIN, 18));
         graphics.drawString(hud.heroStats(), 110, 760);
 
 
+        if (!hero.dead) {
 
-
+        } else {
+            System.out.println("This is the end, goodbye!");
+        }
 
     }
 

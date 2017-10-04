@@ -7,6 +7,8 @@ public class Skeleton extends Character {
         this.dp = (level / 2) * d6();
         this.sp =  level * d6();
         this.hp = this.maxHp;
+        this.dead = false;
+
     }
 
     /*public Skeleton(int x, int y) {

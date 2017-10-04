@@ -15,6 +15,7 @@ public class Hero extends Character {
         this.dp = 2 * d6();
         this.sp = 5 + d6();
         this.hp = this.maxHp;
+        this.dead = false;
         //      map = new Map();
     }
 

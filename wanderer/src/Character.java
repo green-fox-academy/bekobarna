@@ -7,6 +7,7 @@ public class Character {
     double hp;
     double sp;
     double dp;
+    boolean dead;
 
     public int d6 () {
         int range = (6 - 1) + 1;

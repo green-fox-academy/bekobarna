@@ -7,6 +7,8 @@ public class Boss extends Character {
         this.dp = ((level / 2) * d6()) + (d6() / 2);
         this.sp = (level * d6()) + level;
         this.hp = this.maxHp;
+        this.dead = false;
+
     }
 
     /*public Boss(int x, int y) {
