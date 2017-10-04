@@ -6,10 +6,12 @@ import java.awt.*;
 public class Board extends JComponent implements KeyListener {
     int mapSize;
     Hero hero;
+    Wall walls;
 
     public Board() {
         hero = new Hero();
-        mapSize = 720;
+        walls = new Wall();
+        this.mapSize = 720;
         setPreferredSize(new Dimension(mapSize, mapSize));
         setVisible(true);
     }
@@ -17,19 +19,7 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void paint(Graphics graphics) {
         super.paint(graphics);
-
-        int[][] wallsArray = {
-            {0, 0, 0, 1, 0, 1, 0, 0, 0, 0},     //1st row
-            {0, 0, 0, 1, 0, 1, 0, 1, 1, 0},     //2nd row
-            {0, 1, 1, 1, 0, 1, 0, 1, 1, 0},     //3rd row
-            {0, 0, 0, 0, 0, 1, 0, 0, 0, 0},     //4th row
-            {1, 1, 1, 1, 0, 1, 1, 1, 1, 0},     //5th row
-            {0, 1, 0, 1, 0, 0, 0, 0, 1, 0},     //6th row
-            {0, 1, 0, 1, 0, 1, 1, 0, 1, 0},     //7th row
-            {0, 0, 0, 0, 0, 1, 1, 0, 1, 0},     //8th row
-            {0, 1, 1, 1, 0, 0, 0, 0, 1, 0},     //9th row
-            {0, 0, 0, 1, 0, 1, 1, 0, 1, 0},     //10th row
-        };
+        int[][] wallsArray = walls.walls();
 
         for (int i = 0; i < wallsArray.length; i++) {                       //draw the board with tiles and walls
             for (int j = 0; j < wallsArray.length; j++) {
@@ -42,37 +32,28 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
-
-        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );
+        PositionedImage heropic = new PositionedImage(hero.image, hero.posX , hero.posY );      //draw hero
         heropic.draw(graphics);
-
     }
 
 
     @Override
     public void keyTyped(KeyEvent e) {
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
     }
-
     @Override
-    public void keyReleased(KeyEvent e) {
+    public void keyReleased(KeyEvent e) {                                                   //movement with hero
         if (e.getKeyCode() == KeyEvent.VK_UP ) {
-            hero.image = "assets/hero-up.png";
-            hero.posY --;
+            hero.goUp();
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
-            hero.image = "assets/hero-down.png";
-            hero.posY ++;
+            hero.goDown();
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
-            hero.image = "assets/hero-right.png";
-            hero.posX ++;
+            hero.goRight();
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
-            hero.image = "assets/hero-left.png";
-            hero.posX --;
+            hero.goLeft();
         }
         repaint();
     }
-
 }
