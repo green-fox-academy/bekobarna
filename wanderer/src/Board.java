@@ -61,13 +61,7 @@ public class Board extends JComponent implements KeyListener {
         graphics.setFont(new Font("Sans_Serif", Font.PLAIN, 18));
         graphics.drawString(hud.heroStats(), 110, 760);
 
-
-        /*if (!hero.dead) {
-
-        } else {
-            System.out.println("This is the end, goodbye!");
-        }*/
-
+        /**/
     }
 
 
@@ -95,12 +89,9 @@ public class Board extends JComponent implements KeyListener {
             if (hero.posX > 0 && !walls.isItaAWall(hero.posY, hero.posX - 1)) {
                 hero.goLeft();
             }
-        } else if (e.getKeyCode() == KeyEvent.VK_SPACE){
+        } /*else if (e.getKeyCode() == KeyEvent.VK_SPACE){
             hero.strike(boss);
-
-
-        }
-
+            }*/
         repaint();
     }
 }

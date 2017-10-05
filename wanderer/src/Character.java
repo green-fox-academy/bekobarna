@@ -25,4 +25,8 @@ public class Character {
         }
         return success;
     }
-}
+
+    public void battle (Character char1, Character char2) {
+
+    }
+    }

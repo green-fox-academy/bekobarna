@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Power {
   public static void main(String[] args) {
       Scanner scan = new Scanner(System.in);
-      System.out.println("Please tell me two number:");
+      System.out.println("Please tell me two numbers:");
       int number1 = scan.nextInt();
       int number2 = scan.nextInt();
       System.out.println(powerN(number1, number2));

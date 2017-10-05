@@ -45,6 +45,12 @@ public class StudentCounter{
     row5.put("candies", 2);
     map.add( row5 );
 
+    for (int i = 0; i < map.size(); i++) {
+
+
+
+
+    }
 
   }
 }
