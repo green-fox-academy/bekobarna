@@ -7,7 +7,6 @@ public class Wanderer {
         Hero hero = new Hero();
         frame.add(board);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      //  frame.setDefaultCloseOperation(hero.dead == true);
         frame.setVisible(true);
         frame.pack();
         frame.setFocusable(true);

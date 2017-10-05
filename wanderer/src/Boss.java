@@ -1,6 +1,7 @@
 public class Boss extends Character {
 
     public Boss() {
+
         this.image = "assets/boss.png";
         this.level = 1;
         this.maxHp = (2 * level * d6()) + d6();

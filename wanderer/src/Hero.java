@@ -3,10 +3,8 @@ import java.awt.event.KeyListener;
 
 public class Hero extends Character {
 
-  //  Map map;
 
     public Hero() {
-        super();
         this.posX = 0;
         this.posY = 0;
         this.image = "assets/hero-down.png";
@@ -16,7 +14,6 @@ public class Hero extends Character {
         this.sp = 5 + d6();
         this.hp = this.maxHp;
         this.dead = false;
-        //      map = new Map();
     }
 
     public void goUp() {
@@ -40,29 +37,3 @@ public class Hero extends Character {
     }
 
 }
-
-   /* public void keyTyped(KeyEvent e) {
-    }
-    public void keyPressed(KeyEvent e) {
-    }
-    public void keyReleased(
-        KeyEvent e) {                                                       //movement with hero
-        if (e.getKeyCode() == KeyEvent.VK_UP) {
-            if (this.posY > 0 && !map.isItaAWall(this.posY - 1, this.posX)) {
-                this.goUp();
-            }
-        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            if (this.posY < 9 && !map.isItaAWall(this.posY + 1, this.posX)) {
-                this.goDown();
-            }
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            if (this.posX < 9 && !map.isItaAWall(this.posY, this.posX + 1)) {
-                this.goRight();
-            }
-        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            if (this.posX > 0 && !map.isItaAWall(this.posY, this.posX - 1)) {
-                this.goLeft();
-            }
-        }
-        //repaint();
-    }*/

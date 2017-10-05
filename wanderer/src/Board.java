@@ -1,5 +1,6 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,22 +9,23 @@ public class Board extends JComponent implements KeyListener {
     Hero hero;
     Map walls;
     Boss boss;
-    Skeleton skeleton1;
-    Skeleton skeleton2;
-    Skeleton skeleton3;
     Hud hud;
+    ArrayList<Skeleton> skeletons;
 
     public Board() {
-        hero = new Hero();
-        walls = new Map();
-        boss = new Boss();
-        skeleton1 = new Skeleton();
-        skeleton2 = new Skeleton();
-        skeleton3 = new Skeleton();
-        hud = new Hud();
         this.mapSize = 720;
         setPreferredSize(new Dimension(mapSize, 880));
         setVisible(true);
+        hero = new Hero();
+        walls = new Map();
+        boss = new Boss();
+        hud = new Hud();
+        skeletons = new ArrayList<>();
+
+        for (int i = 0; i < 3; i++) {
+            Skeleton sk = new Skeleton();
+            skeletons.add(sk);
+        }
     }
 
     @Override
@@ -47,12 +49,11 @@ public class Board extends JComponent implements KeyListener {
         heropic.draw(graphics);
         PositionedImage bosspic = new PositionedImage(boss.image, 9 , 0 );                  //draw boss
         bosspic.draw(graphics);
-        PositionedImage skeleton1pic = new PositionedImage(skeleton1.image, 9 , 2 );      //draw skeleton1
-        skeleton1pic.draw(graphics);
-        PositionedImage skeleton2pic = new PositionedImage(skeleton2.image, 9 , 5 );      //draw skeleton2
-        skeleton2pic.draw(graphics);
-        PositionedImage skeleton3pic = new PositionedImage(skeleton3.image, 4 , 5 );      //draw skeleton3
-        skeleton3pic.draw(graphics);
+
+        for (int i = 0; i < skeletons.size(); i++) {                                                    //draw skeletons
+            PositionedImage skeletonpic = new PositionedImage(skeletons.get(i).image, 9  , 2 + (2 * i) );
+            skeletonpic.draw(graphics);
+        }
 
         graphics.setColor(Color.WHITE);                                                             // draw HUD
         graphics.fillRect(100, 725, 400, 60);
@@ -78,23 +79,28 @@ public class Board extends JComponent implements KeyListener {
     }
     @Override
     public void keyReleased(KeyEvent e) {                                                       //movement with hero
-        if (e.getKeyCode() == KeyEvent.VK_UP ) {
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
             if (hero.posY > 0 && !walls.isItaAWall(hero.posY - 1, hero.posX)) {
                 hero.goUp();
             }
-        } else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             if (hero.posY < 9 && !walls.isItaAWall(hero.posY + 1, hero.posX)) {
                 hero.goDown();
             }
-        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
+        } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             if (hero.posX < 9 && !walls.isItaAWall(hero.posY, hero.posX + 1)) {
                 hero.goRight();
             }
-        } else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
+        } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             if (hero.posX > 0 && !walls.isItaAWall(hero.posY, hero.posX - 1)) {
                 hero.goLeft();
             }
+        } else if (e.getKeyCode() == KeyEvent.VK_SPACE){
+            hero.strike(boss);
+
+
         }
+
         repaint();
     }
 }

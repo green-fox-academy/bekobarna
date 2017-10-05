@@ -13,4 +13,16 @@ public class Character {
         int range = (6 - 1) + 1;
         return (int)(Math.random() * range) + 1;
     }
+
+    public boolean strike(Character enemy) {
+        double sv = this.sp + (2 * d6());
+        boolean success;
+        if (sv > enemy.dp) {
+            enemy.hp -= sv;
+            success = true;
+        } else {
+            success = false;
+        }
+        return success;
+    }
 }
