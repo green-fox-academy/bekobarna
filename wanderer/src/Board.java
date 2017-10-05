@@ -62,11 +62,11 @@ public class Board extends JComponent implements KeyListener {
         graphics.drawString(hud.heroStats(), 110, 760);
 
 
-        if (!hero.dead) {
+        /*if (!hero.dead) {
 
         } else {
             System.out.println("This is the end, goodbye!");
-        }
+        }*/
 
     }
 

@@ -3,7 +3,6 @@ import java.awt.event.KeyListener;
 
 public class Hero extends Character {
 
-
     public Hero() {
         this.posX = 0;
         this.posY = 0;
