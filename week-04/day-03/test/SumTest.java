@@ -20,8 +20,7 @@ public class SumTest {
 
     @Test
     public void summing() throws Exception {
-        int expected = 15;
-        assertEquals(expected, number.summing());
+        assertEquals(15, number.summing());
 
     }
 }
