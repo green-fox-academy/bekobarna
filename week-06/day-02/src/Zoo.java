@@ -11,5 +11,11 @@ public class Zoo {
         System.out.println(reptile.getName() + ", " + reptile.wantChild());
         System.out.println(mammal.getName() + ", " + mammal.wantChild());
         System.out.println(bird.getName() + ", " + bird.wantChild());
+
+        System.out.println("\nWhat do you want to eat?");
+        System.out.println(reptile.getName() + " " + reptile.eat());
+        System.out.println(mammal.getName() + " " + mammal.eat());
+        System.out.println(bird.getName() + " " + bird.eat());
     }
+
 }

@@ -11,12 +11,11 @@ public class FractalYellow {
     /*int sizeRandom = (int) (Math.random( ) * 1000);                  //random size
     int size = sizeRandom;*/
     int size = 500;
-    int n = 4;                              //level of deepness
+    int n = 6;                              //level of deepness
     int x = (WIDTH - size) / 2;
     int y = (HEIGHT - size) / 2;
     squareDraw(graphics, x, y, size, n);
     }
-
 
   static void squareDraw(Graphics graphics, int x, int y, int size, int n){
       if (n < 1){

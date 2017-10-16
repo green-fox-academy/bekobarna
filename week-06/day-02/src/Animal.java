@@ -15,8 +15,10 @@ public abstract class Animal {
 
     public abstract String wantChild();
 
-    public abstract void eat();
+    public abstract String eat();
 
-    public abstract String getName();
+    public String getName() {
+        return name;
+    };
 
 }

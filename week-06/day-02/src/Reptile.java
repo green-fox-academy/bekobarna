@@ -14,11 +14,7 @@ public class Reptile extends Animal {
     }
 
     @Override
-    public void eat() {
-    }
-
-    @Override
-    public String getName() {
-        return name;
+    public String eat() {
+        return "likes to eat little animals";
     }
 }
