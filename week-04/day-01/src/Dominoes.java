@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Dominoes implements Comparable{
+public class Dominoes {
     public static void main(String[] args) {
         List<Domino> dominoes = initializeDominoes();
 
-        for (int i = 0; i < dominoes.size() - 1; i++) {
+        /*for (int i = 0; i < dominoes.size() - 1; i++) {
             for (int j = 0; j < dominoes.size(); j++) {
                 if (dominoes.get(i).getValues()[1] == dominoes.get(j).getValues()[0]) {
                     Domino temp = dominoes.get(i + 1);
@@ -20,10 +20,9 @@ public class Dominoes implements Comparable{
                     j = i + 1;
                 }
             }
-        }
+        }*/
         System.out.println(dominoes);
     }
-
 
     static List<Domino> initializeDominoes() {
         List<Domino> dominoes = new ArrayList<>();
@@ -37,8 +36,4 @@ public class Dominoes implements Comparable{
         return dominoes;
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }
