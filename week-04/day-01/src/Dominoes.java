@@ -22,6 +22,10 @@ public class Dominoes {
             }
         }*/
         System.out.println(dominoes);
+
+        for(Domino d : dominoes) {
+            d.printAllFields();
+        }
     }
 
     static List<Domino> initializeDominoes() {

@@ -21,5 +21,4 @@ public class Zoo {
         System.out.println(mammal.getName() + " " + mammal.greet());
         System.out.println(bird.getName() + " " + bird.greet());
     }
-
 }

@@ -1,4 +1,7 @@
-public class Domino implements Comparable<Domino> {
+import java.util.Arrays;
+
+public class Domino implements Comparable<Domino>, Printable {
+
     private final int[] values;
 
     public Domino(int valueA, int valueB) {
@@ -17,5 +20,10 @@ public class Domino implements Comparable<Domino> {
     @Override
     public int compareTo(Domino other) {
         return Integer.compare(this.values[0], other.values[0]);
+    }
+
+    @Override
+    public void printAllFields() {
+        System.out.println(Arrays.toString(values));
     }
 }
