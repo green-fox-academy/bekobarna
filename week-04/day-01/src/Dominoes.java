@@ -3,9 +3,10 @@
 // eg: [2, 4], [4, 3], [3, 5] ...
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Dominoes {
+public class Dominoes implements Comparable{
     public static void main(String[] args) {
         List<Domino> dominoes = initializeDominoes();
 
@@ -20,8 +21,6 @@ public class Dominoes {
                 }
             }
         }
-
-
         System.out.println(dominoes);
     }
 
@@ -34,6 +33,12 @@ public class Dominoes {
         dominoes.add(new Domino(6, 7));
         dominoes.add(new Domino(2, 4));
         dominoes.add(new Domino(7, 1));
+        Collections.sort(dominoes);
         return dominoes;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

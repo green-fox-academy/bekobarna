@@ -23,7 +23,7 @@ public class PallidaClass {
         System.out.println("Pallida " + className + " class has " + students.size() + " students and " + mentors.size() + " mentors.");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         ArrayList<Person> people = new ArrayList<>();
 
         Person mark = new Person("Mark", 46, "male");
@@ -32,6 +32,8 @@ public class PallidaClass {
         people.add(jane);
         Student john = new Student("John Doe", 20, "male", "BME");
         people.add(john);
+        Student johnTheClone = (Student) john.clone();
+        people.add(johnTheClone);
         Student student = new Student();
         people.add(student);
         Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
