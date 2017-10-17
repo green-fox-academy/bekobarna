@@ -12,7 +12,7 @@ public class Gnirts implements CharSequence {
 
     @Override
     public char charAt(int index) {
-        return this.word.charAt(word.length() - 1 - index);
+        return word.charAt(word.length() - 1 - index);
     }
 
     @Override
