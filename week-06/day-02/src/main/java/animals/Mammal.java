@@ -1,3 +1,5 @@
+package main.java.animals;
+
 public class Mammal extends Animal {
 
     public Mammal(String name, int age, String gender, int height) {
@@ -5,7 +7,8 @@ public class Mammal extends Animal {
     }
 
     @Override
-    public void greet() {
+    public String greet() {
+        return "growls";
     }
 
     @Override

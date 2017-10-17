@@ -1,11 +1,14 @@
-public class Bird extends Animal{
+package main.java.animals;
+
+public class Bird extends Animal {
 
     public Bird(String name, int age, String gender, int height) {
         super(name, age, gender, height);
     }
 
     @Override
-    public void greet() {
+    public String greet() {
+        return "chirps";
     }
 
     @Override

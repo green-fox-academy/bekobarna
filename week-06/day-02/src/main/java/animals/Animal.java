@@ -1,3 +1,5 @@
+package main.java.animals;
+
 public abstract class Animal {
     String name;
     int age;
@@ -11,7 +13,7 @@ public abstract class Animal {
         this.height = height;
     }
 
-    public abstract void greet();
+    public abstract String greet();
 
     public abstract String wantChild();
 

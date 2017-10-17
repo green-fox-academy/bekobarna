@@ -1,4 +1,4 @@
-//import main.java.animals.*;
+import main.java.animals.*;
 
 public class Zoo {
 
@@ -16,6 +16,11 @@ public class Zoo {
         System.out.println(reptile.getName() + " " + reptile.eat());
         System.out.println(mammal.getName() + " " + mammal.eat());
         System.out.println(bird.getName() + " " + bird.eat());
+
+        System.out.println("\n What dou you say?");
+        System.out.println(reptile.getName() + " " + reptile.greet());
+        System.out.println(mammal.getName() + " " + mammal.greet());
+        System.out.println(bird.getName() + " " + bird.greet());
     }
 
 }
