@@ -4,16 +4,12 @@ public class Mammal extends Animal {
 
     public Mammal(String name, int age, String gender, int height) {
         super(name, age, gender, height);
+        this.usesEggs = false;
     }
 
     @Override
     public String greet() {
         return "growls";
-    }
-
-    @Override
-    public String wantChild() {
-        return "want child from my uterus!";
     }
 
     @Override

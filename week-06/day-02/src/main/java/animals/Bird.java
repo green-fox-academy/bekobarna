@@ -4,16 +4,12 @@ public class Bird extends Animal {
 
     public Bird(String name, int age, String gender, int height) {
         super(name, age, gender, height);
+        this.usesEggs = true;
     }
 
     @Override
     public String greet() {
         return "chirps";
-    }
-
-    @Override
-    public String wantChild() {
-        return "want a child from an egg!";
     }
 
     @Override
