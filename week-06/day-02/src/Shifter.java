@@ -2,14 +2,14 @@ public class Shifter implements CharSequence {
     String word;
     int shift;
 
-    public Shifter(String input, int number) {
+    public Shifter(String input, int shiftNumber) {
         this.word = input;
-        this.shift = number;
+        this.shift = shiftNumber;
     }
 
     @Override
     public int length() {
-        return word.length();
+        return 0;
     }
 
     @Override

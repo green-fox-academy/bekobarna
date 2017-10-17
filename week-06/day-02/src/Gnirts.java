@@ -7,7 +7,7 @@ public class Gnirts implements CharSequence {
 
     @Override
     public int length() {
-        return word.length();
+        return 0;
     }
 
     @Override
