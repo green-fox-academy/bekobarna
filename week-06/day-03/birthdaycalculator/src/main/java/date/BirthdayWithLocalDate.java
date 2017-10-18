@@ -41,9 +41,15 @@ public class BirthdayWithLocalDate implements BirthdayCalculator<LocalDate> {
     @Override
     public int calculateDaysToNextAnniversary(LocalDate date) {
         LocalDate now = LocalDate.now();
-        int dateAnni = (now.getDayOfYear() - date.getDayOfYear());
-        
-        return dateAnni;
+        int expected;
+        if (now.getDayOfYear() == date.getDayOfYear()) {
+            expected = 0;
+        } else if (now.getDayOfYear() > date.getDayOfYear()) {
+            return LocalDate.of(now.getYear(), 12, 31).getDayOfYear() - now.getDayOfYear() + date.getDayOfYear();
+        } else {
+            return date.getDayOfYear() - now.getDayOfYear();
+        }
+        return expected;
         // TODO - the number of days remaining to the next anniversary of 'date' (e.g. if tomorrow, return 1)
     }
 
