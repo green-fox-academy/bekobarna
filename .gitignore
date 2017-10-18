@@ -1,8 +1,12 @@
-# IntelliJ files and folders
+.idea/**/gradle.xml
+.idea/**/libraries
+.gradle
+**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
 .idea/
 out
+*.xml
 *.iml
-*.iml
-
-# gf software files
 .gf.json
