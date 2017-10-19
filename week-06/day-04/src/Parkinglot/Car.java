@@ -1,3 +1,5 @@
+package Parkinglot;
+
 public class Car {
     Type type;
     Color color;
