@@ -13,7 +13,6 @@ public class SortTheArray {
                 for (T element : inputArray) {
                     System.out.printf("%s ", element);
                 }
-                System.out.println();
             }
         }
 

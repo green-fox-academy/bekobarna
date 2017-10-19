@@ -6,14 +6,13 @@ import java.util.Collections;
 public class Deck extends Card {
     static ArrayList<Card> deck;
 
-    public Deck(Color color, Suit suit, Rank rank) {
-        super(color, suit, rank);
+    public Deck() {
     }
 
     public static void fillDeck() {
         deck = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            deck.add(i, new Card(Color.randomColor(), Suit.randomSuit(), Rank.randomRank()));
+            deck.add(i, new Card());
         }
     }
 

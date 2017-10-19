@@ -19,7 +19,7 @@ public class Car {
         }
     }
 
-    public Car(Type type, Color color) {
+    public Car() {
         this.type = Type.getRandomType();
         this.color = Color.getRandomColor();
     }
