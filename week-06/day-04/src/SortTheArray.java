@@ -1,14 +1,15 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 public class SortTheArray {
 
         public static <T extends Number> void printArray(T[] inputArray) {
             try {
-                Arrays.sort(inputArray);
+                Arrays.sort(inputArray, Collections.reverseOrder());
             } catch (Exception e){
                 System.out.println("oops, something went wrong");
             } finally {
-                Arrays.sort(inputArray);
+                Arrays.sort(inputArray, Collections.reverseOrder());
                 for (T element : inputArray) {
                     System.out.printf("%s ", element);
                 }
