@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class Help {
+public class PrintUsage {
     ArrayList<String> listHelp;
 
-    public Help() {
+    public PrintUsage() {
         listHelp = new ArrayList<>();
         listHelp.add("\nCommand Line Todo application");
         listHelp.add("=============================");
@@ -11,6 +11,7 @@ public class Help {
         listHelp.add("-a   Adds a new task");
         listHelp.add("-r   Removes an task");
         listHelp.add("-c   Completes an task");
+        listHelp.add("-u   [id] update description");
     }
 
     public void printHelp() {

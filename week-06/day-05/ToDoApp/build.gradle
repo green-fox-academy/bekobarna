@@ -14,3 +14,14 @@ dependencies {
     compile 'net.sf.jopt-simple:jopt-simple:6.0-alpha-2'
     compile 'com.opencsv:opencsv:4.0'
 }
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes 'Main-Class': 'Main'
+    }
+}
