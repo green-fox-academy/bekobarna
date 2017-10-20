@@ -4,7 +4,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class ListTasks {
-    public void taskPrint() {                                   //Print to list and error handling
+    public void taskPrint() {
         try {
             Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna\\week-06\\day-05\\ToDoApp\\src\\assets\\tasks.txt");
             List<String> myList = Files.readAllLines(filePath);
@@ -19,6 +19,5 @@ public class ListTasks {
         } catch (Exception e) {
             System.out.println("\nCannot access or read tasks.txt");
         }
-    }                               //Print to list and error handling
-
+    }
 }

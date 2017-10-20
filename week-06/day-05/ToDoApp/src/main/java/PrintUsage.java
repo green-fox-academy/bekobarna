@@ -11,7 +11,7 @@ public class PrintUsage {
         listHelp.add("-a   Adds a new task");
         listHelp.add("-r   Removes an task");
         listHelp.add("-c   Completes an task");
-        listHelp.add("-u   [id] update description");
+        listHelp.add("-u   [id] Update task description");
     }
 
     public void printHelp() {
