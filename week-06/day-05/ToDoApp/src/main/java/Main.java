@@ -9,37 +9,33 @@ public class Main {
         NewTask addNew = new NewTask();
         RemoveTask remove = new RemoveTask();
 
-        OptionParser parser = new OptionParser();
-        parser.accepts("l");
-        parser.accepts("a");
-        parser.accepts("r");
-        parser.accepts("u");
-        //parser.accepts("a").withRequiredArg();
+        OptionParser parser = new OptionParser("la::r::u::");
+        parser.accepts("l").isRequired();
+        parser.accepts("a").isRequired();
+        parser.accepts("r").isRequired();
+        parser.accepts("u").isRequired();
         OptionSet options = parser.parse(args);
 
-        if (options.has("a")) {
-            addNew.taskAdd(args);
-            //System.out.println("`-a` was given with the argument " + options.valueOf("a"));
-        }
 
-        if (options.has("l")) {
-            list.taskPrint();
-            //System.out.println("`-l` was given with the no additional information.");
-        }
-
-
-        if (args.length == 0) {
+        if (!options.hasOptions()) {
             help.printHelp();
         } else if ((!args[0].equals("-l")) && (!args[0].equals("-a")) && (!args[0].equals("-r")) && (!args[0].equals("-u"))) {
             System.out.println("\nUnsupported argument\n");
             help.printHelp();
-        } /*else if ((args[0].equals("-l"))) {
+        } else if (options.has("l")) {
             list.taskPrint();
-        } else if ((args[0].equals("-a"))) {
+        } else if (options.has("a")) {
             addNew.taskAdd(args);
-        }*/ else if ((args[0].equals("-r"))) {
-            remove.taskRemove(args);
-        }
+        } else if (options.has("r")) {
+            remove.taskRemove(args, 3);
+        } /*else if (options.has("u")) {
+            addNew.taskAdd(args);
+        }*/
+
+
+
+
+
 
     }
 }
