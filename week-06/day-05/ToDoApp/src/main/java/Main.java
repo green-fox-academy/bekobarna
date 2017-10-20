@@ -1,3 +1,4 @@
+import joptsimple.OptionException;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 
@@ -10,24 +11,25 @@ public class Main {
         RemoveTask remove = new RemoveTask();
 
         OptionParser parser = new OptionParser("la:r:u:");
-        parser.accepts("l").isRequired();
-        parser.accepts("a").isRequired();
-        parser.accepts("r").isRequired();
-        parser.accepts("u").isRequired();
+        parser.accepts("l");
+        parser.accepts("a");
+        parser.accepts("r");
+        parser.accepts("u");
+        parser.allowsUnrecognizedOptions();
+        parser.nonOptions();
         OptionSet options = parser.parse(args);
 
         if (!options.hasOptions()) {
-            help.printHelp();
-        } else if (!options.has("l") && !options.has("a") && !options.has("r")) {
             System.out.println("\nUnsupported argument\n");
             help.printHelp();
-        } else if (options.has("l")) {
+        }  else if (options.has("l")) {
             list.taskPrint();
         } else if (options.has("a")) {
             addNew.taskAdd(args);
         } else if (options.has("r")) {
             remove.taskRemove(args);
         }
+
     }
 }
 
