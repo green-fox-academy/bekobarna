@@ -7,7 +7,7 @@ public class Tasks {
 
     public void taskPrint() {                                   //Print to list and error handling
         try {
-            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
+            Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna\\week-06\\day-05\\ToDoApp\\src\\assets\\tasks.txt");
             List<String> myList = Files.readAllLines(filePath);
             if (myList.size() == 0) {
                 System.out.println("\nNo todos for today! :)");
@@ -31,7 +31,7 @@ public class Tasks {
 
         if (!resultString.isEmpty()) {
             try {
-                Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna-todo-app/tasks.txt");
+                Path filePath = Paths.get("C:\\Users\\bekob\\greenfox\\bekobarna\\week-06\\day-05\\ToDoApp\\src\\assets\\tasks.txt");
                 List<String> myListOriginal = Files.readAllLines(filePath);
                 myListOriginal.add(myListOriginal.size(), resultString);
                 Files.write(filePath, myListOriginal);
