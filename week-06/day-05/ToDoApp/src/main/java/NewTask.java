@@ -26,5 +26,4 @@ public class NewTask {
             System.out.println("\nUnable to add: no task provided");
         }
     }
-
 }
