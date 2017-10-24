@@ -10,8 +10,8 @@ public class PrintUsage {
         listHelp.add("\n-l   Lists all the tasks");
         listHelp.add("-a   Adds a new task");
         listHelp.add("-r   Removes an task");
-        listHelp.add("-c   Completes an task");
-        listHelp.add("-u   [id] Update task description");
+        listHelp.add("-c   Completes an task  - not done yet");
+        listHelp.add("-u   [id] Update task description    - not done yet");
     }
 
     public void printHelp() {

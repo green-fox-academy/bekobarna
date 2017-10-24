@@ -1,4 +1,3 @@
-import joptsimple.OptionException;
 import joptsimple.OptionParser;
 import joptsimple.OptionSet;
 
@@ -29,7 +28,6 @@ public class Main {
         } else if (options.has("r")) {
             remove.taskRemove(args);
         }
-
     }
 }
 
