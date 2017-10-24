@@ -33,7 +33,7 @@ public class HelloToWorld {
     }
 
     public int getRandomNumber() {
-        return (int) (Math.random() * 256);
+        return (int) (Math.random() * 255);
     }
 
 }
