@@ -13,7 +13,6 @@ public class HelloRestControllers {
     @ResponseBody
     @RequestMapping(value = "/greeting")
     public Greetings greeting (@RequestParam(value = "name") String name) {
-
         Greetings greetings = new Greetings(counter.getAndIncrement(), name);
         return greetings;
     }

@@ -5,6 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'"/>
+<style>
+p {color: rgb(${num}, ${num}, ${num})}
+</style>
+<p th:text="${greeting} + ', ' + ${name}"/>
 </body>
 </html>

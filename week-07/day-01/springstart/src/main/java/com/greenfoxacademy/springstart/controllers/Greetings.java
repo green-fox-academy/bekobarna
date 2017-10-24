@@ -6,7 +6,7 @@ public class Greetings {
 
     public Greetings(Long id, String content) {
         this.id = id;
-        this.content = "Hello " + content;
+        this.content = content;
     }
 
     public Long getId() {
