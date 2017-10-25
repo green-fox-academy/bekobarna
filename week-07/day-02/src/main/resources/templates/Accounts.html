@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
   <title>Thymeleaf Exercise #</title>
   <link rel="stylesheet" th:href="@{/style.css}" />
@@ -15,13 +15,15 @@
     <th>Name</th>
     <th>Balance</th>
     <th>Type of animal</th>
+    <th>Is it a king?</th>
     <th></th>
 
   <tr th:each="account, iterstat: ${accounts}" align="center">
     <td th:text="${iterstat.count}" />
     <td th:text="${account.name}" />
-    <td th:text="${account.balance}  + '.00 Zebra'" />
+    <td th:text="${account.balance}  + '.00  Zebra'" />
     <td th:text="${account.animalType}" />
+    <td th:text="${account.isItAKing()}"/>
   </tr>
   </tr>
 </table>
