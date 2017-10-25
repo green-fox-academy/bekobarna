@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AccountsController {
 
+
     @RequestMapping(value = "/Accounts")
     public String account (Model model) {
         ArrayList<BankAccount> accountList = new ArrayList<>();

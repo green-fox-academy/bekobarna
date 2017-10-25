@@ -1,6 +1,7 @@
 html {
+  text-align: center;
   margin: auto;
-  background: url(lionking.jpeg) no-repeat center center fixed;
+  background: url(tenor.gif) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,23 +9,18 @@ html {
 }
 
 table {
-  margin: auto;
-  width: 750px;
-  border: 1px;
+  margin:auto;
 }
 
-th {
-  border: 2px solid skyblue;
-  background-color: lightgrey;
-  margin: auto;
-}
-
-td {
+th, td {
+  margin:auto;
+  text-align: center;
   border: 2px solid skyblue;
   background-color: lightgrey;
 }
 
 h1 {
+  text-align: center;
   font-size: 300%;
   color: white;
   padding-right: 10%;

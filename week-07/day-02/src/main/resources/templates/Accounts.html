@@ -22,7 +22,7 @@
   <tr th:style="${account.isItAKing()} == true ? 'color: red'" th:each="account, iterstat: ${accounts}" >
     <td th:text="${iterstat.count}" />
     <td th:text="${account.name}" />
-    <td th:text="${account.balance}  + '.00  Zebra'" />
+    <td th:text="${#numbers.formatDecimal(account.balance, 0, 2)} + ' Zebra'"></td>
     <td th:text="${account.animalType}" />
     <td th:text="${account.isItAKing()}"/>
     <td th:text="${account.isGoodGuy()}"/>
