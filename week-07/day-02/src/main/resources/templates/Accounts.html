@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
   <title>Thymeleaf Exercise #</title>
-  <link rel="stylesheet" th:href="@{/style.css}" />
+  <link rel="stylesheet" th:href="@{style.css}" />
   <meta charset="utf-8" />
 </head>
 <body>
 
 <h1 >List of accounts at Bank of Simba</h1>
 
-<table width="750px" border="1">
-  <tr align="center">
+<table>
+  <tr>
     <th>Id</th>
     <th>Name</th>
     <th>Balance</th>
@@ -19,7 +19,7 @@
     <th>Good guy or bad guy?</th>
   </tr>
 
-  <tr th:style="${account.isItAKing()} == true ? 'color: red'" th:each="account, iterstat: ${accounts}" align="center" >
+  <tr th:style="${account.isItAKing()} == true ? 'color: red'" th:each="account, iterstat: ${accounts}" >
     <td th:text="${iterstat.count}" />
     <td th:text="${account.name}" />
     <td th:text="${account.balance}  + '.00  Zebra'" />

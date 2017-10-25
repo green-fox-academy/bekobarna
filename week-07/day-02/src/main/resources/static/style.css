@@ -1,0 +1,33 @@
+html {
+  margin: auto;
+  background: url(lionking.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+table {
+  margin: auto;
+  width: 750px;
+  border: 1px;
+}
+
+th {
+  border: 2px solid skyblue;
+  background-color: lightgrey;
+  margin: auto;
+}
+
+td {
+  border: 2px solid skyblue;
+  background-color: lightgrey;
+}
+
+h1 {
+  font-size: 300%;
+  color: white;
+  padding-right: 10%;
+  padding-left: 10%;
+  text-decoration: underline;
+}
