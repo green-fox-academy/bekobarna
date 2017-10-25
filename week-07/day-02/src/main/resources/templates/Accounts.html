@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>List of accounts</h1>
+<h1 >List of accounts at Bank of Simba</h1>
 
 <table width="750px" border="1">
   <tr align="center">
@@ -16,6 +16,8 @@
     <th>Balance</th>
     <th>Type of animal</th>
     <th>Is it a king?</th>
+    <th>Good guy or bad guy?</th>
+  </tr>
 
   <tr th:style="${account.isItAKing()} == true ? 'color: red'" th:each="account, iterstat: ${accounts}" align="center" >
     <td th:text="${iterstat.count}" />
@@ -23,7 +25,7 @@
     <td th:text="${account.balance}  + '.00  Zebra'" />
     <td th:text="${account.animalType}" />
     <td th:text="${account.isItAKing()}"/>
-  </tr>
+    <td th:text="${account.isGoodGuy()}"/>
   </tr>
 </table>
 </body>

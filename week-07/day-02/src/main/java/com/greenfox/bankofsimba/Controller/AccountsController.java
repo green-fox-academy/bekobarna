@@ -13,11 +13,12 @@ public class AccountsController {
     @RequestMapping(value = "/Accounts")
     public String account (Model model) {
         ArrayList<BankAccount> accountList = new ArrayList<>();
-        accountList.add(new BankAccount("Timon", "10", "meercat", false));
-        accountList.add(new BankAccount("Pumbaa", "10", "hog", false));
-        accountList.add(new BankAccount("Scar", "5000", "lion", true));
-        accountList.add(new BankAccount("Zazu", "100", "bird", false));
-        accountList.add(new BankAccount("Rafiki", "500", "mandrill", false));
+        accountList.add(new BankAccount("Simba", "2000", "lion", true, true));
+        accountList.add(new BankAccount("Timon", "10", "meercat", false, true));
+        accountList.add(new BankAccount("Pumbaa", "10", "hog", false, true));
+        accountList.add(new BankAccount("Scar", "5000", "lion", true, false));
+        accountList.add(new BankAccount("Zazu", "100", "bird", false, true));
+        accountList.add(new BankAccount("Rafiki", "500", "mandrill", false, true));
         model.addAttribute("accounts", accountList);
         return "Accounts";
     }
