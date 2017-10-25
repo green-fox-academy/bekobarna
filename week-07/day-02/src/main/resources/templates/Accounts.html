@@ -9,16 +9,15 @@
 
 <h1>List of accounts</h1>
 
-<table width="750px">
+<table width="750px" border="1">
   <tr align="center">
     <th>Id</th>
     <th>Name</th>
     <th>Balance</th>
     <th>Type of animal</th>
     <th>Is it a king?</th>
-    <th></th>
 
-  <tr th:each="account, iterstat: ${accounts}" align="center">
+  <tr th:style="${account.isItAKing()} == true ? 'color: red'" th:each="account, iterstat: ${accounts}" align="center" >
     <td th:text="${iterstat.count}" />
     <td th:text="${account.name}" />
     <td th:text="${account.balance}  + '.00  Zebra'" />
