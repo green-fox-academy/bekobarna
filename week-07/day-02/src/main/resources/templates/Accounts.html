@@ -9,15 +9,15 @@
 
 <h1>List of accounts</h1>
 
-<table>
-  <tr>
+<table width="750px">
+  <tr align="center">
     <th>Id</th>
     <th>Name</th>
     <th>Balance</th>
     <th>Type of animal</th>
     <th></th>
 
-  <tr th:each="account, iterstat: ${accounts}">
+  <tr th:each="account, iterstat: ${accounts}" align="center">
     <td th:text="${iterstat.count}" />
     <td th:text="${account.name}" />
     <td th:text="${account.balance}  + '.00 Zebra'" />
