@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Programmer Fox Club Nutrition Store</title>
+</head>
+<body>
+<ul>
+  <li><a href="/">Information</a></li>
+  <li><a href="/nutritionstore">Nutrition store</a></li>
+  <li><a href="/trickcenter">Trick center</a></li>
+</ul>
+
+<table>
+<p th:text="Food"></p>
+
+<select th:field="*{foods}">
+  <option th:each="food : ${foods}"
+          th:value="${food}"
+          th:text="${food}"></option>
+</select>
+
+<p th:text="Drink"></p>
+<select th:field="*{drinks}">
+  <option th:each="drink : ${drinks}"
+          th:value="${drink}"
+          th:text="${drink}"></option>
+</select>
+  <p><input type="submit" value="Change"/></p>
+</table>
+</body>
+</html>

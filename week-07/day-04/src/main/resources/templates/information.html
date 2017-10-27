@@ -2,11 +2,13 @@
 <html lang="en" xmlns:th="http:/thymeleaf.org">
 <head>
   <meta charset="UTF-8" />
-  <title>Programmer Fox Club</title>
+  <title>Programmer Fox Club Information</title>
 </head>
 <body>
 <ul>
-  <li><a href="/information">Information</a></li>
+  <li><a href="/">Information</a></li>
+  <li><a href="/nutritionstore">Nutrition store</a></li>
+  <li><a href="/trickcenter">Trick center</a></li>
 </ul>
 <img th:src="@{/greenfox.png}"/>
 <p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + '. He knows ' + ${tricksamount} + ' tricks.'">This if Mr. Fox. Currently living on pizza and lemonade. He knows 2 tricks.</p>

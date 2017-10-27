@@ -1,62 +1,55 @@
 package com.greenfox.programmerfoxclub.model;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Fox {
     String name;
-    int tricksAmount;
-    String food;
-    String drink;
-    List<String> lisOfTricks;
+    Foods food;
+    Drinks drink;
+    Tricks tricks;
 
-    public List<String> getLisOfTricks() {
-        return lisOfTricks;
-    }
 
-    public void setLisOfTricks(String first, String second) {
-    }
-
-    public Fox(String name, int tricksAmount, String food, String drink,
-        List<String> lisOfTricks) {
+    public Fox(String name, Foods food, Drinks drink, Tricks tricks) {
         this.name = name;
-        this.tricksAmount = tricksAmount;
         this.food = food;
         this.drink = drink;
-        this.lisOfTricks = lisOfTricks;
+        this.tricks = tricks;
+    }
+
+    public Tricks getTricks() {
+        return tricks;
+    }
+
+    public void setTricks(Tricks tricks) {
+        this.tricks = tricks;
     }
 
     public Fox() {
     }
 
-    public int getTricksAmount() {
-        return tricksAmount;
+    public Foods getFood() {
+        return food;
+    }
+
+    public void setFood(Foods food) {
+        this.food = food;
+    }
+
+    public Drinks getDrink() {
+        return drink;
+    }
+
+    public void setDrink(Drinks drink) {
+        this.drink = drink;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getFood() {
-        return food;
-    }
-
-    public String getDrink() {
-        return drink;
-    }
-
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setTricksAmount(int tricksAmount) {
-        this.tricksAmount = tricksAmount;
-    }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
-
-    public void setDrink(String drink) {
-        this.drink = drink;
     }
 }
