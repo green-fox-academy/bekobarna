@@ -13,9 +13,8 @@
 <img th:src="@{/greenfox.png}"/>
 <p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + '. He knows ' + ${tricksamount} + ' tricks.'">This if Mr. Fox. Currently living on pizza and lemonade. He knows 2 tricks.</p>
 <h1>Known tricks</h1>
-<ul>
-  <li>Write in HTML</li>
-  <li>Code in Java</li>
+<ul th:each="trick : ${tricks}">
+  <li th:value="${trick}" th:text="${trick}">You know no tricks yet. Go and learn some.</li>
 </ul>
 </body>
 </html>

@@ -19,13 +19,11 @@ public class MainController {
     @RequestMapping(value = "/")
     public String information (Model model) {
         fox.setName("Mr.Green");
-        fox.setFood(Foods.SALAD);
-        fox.setDrink(Drinks.WATER);
         model.addAttribute("name", fox.getName());
-        model.addAttribute("food", fox.getFood());
-        model.addAttribute("drink", fox.getDrink());
+        model.addAttribute("food", Foods.SALAD);
+        model.addAttribute("drink", Drinks.WATER);
         model.addAttribute("tricks", Tricks.values());
-        model.addAttribute("tricksAmount", Tricks.values().length);
+        model.addAttribute("tricksamount", Tricks.values().length);
         return "information";
     }
 
