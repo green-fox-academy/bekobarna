@@ -1,11 +1,10 @@
 package com.greenfox.programmerfoxclub.model;
 
 public enum  Tricks {
-    NONE(""),
     WRIIEINHTML("Write in HTML"),
     CODEINJAVA("Code in Java"),
     STYLEWITHCSS("Style with CSS"),
-    PITY("Pity");
+    UPLOADTOGITHUB("Upload to Github");
 
     private String name;
 

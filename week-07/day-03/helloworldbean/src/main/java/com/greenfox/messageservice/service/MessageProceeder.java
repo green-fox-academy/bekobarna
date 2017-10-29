@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MessageProceeder {
     String type;
 
-
     public MessageProceeder(EmailService emailService) {
         this.type = emailService.type;
     }

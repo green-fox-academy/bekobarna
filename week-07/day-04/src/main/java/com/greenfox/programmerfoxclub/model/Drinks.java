@@ -1,7 +1,6 @@
 package com.greenfox.programmerfoxclub.model;
 
     public enum Drinks {
-        NONE(""),
         BEER("Beer"),
         WHISKEY("Whiskey"),
         VODKA("Vodka"),

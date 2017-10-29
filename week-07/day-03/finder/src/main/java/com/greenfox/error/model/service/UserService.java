@@ -1,17 +1,9 @@
-package com.greenfox.error.model.model;
+package com.greenfox.error.model.service;
 
+import com.greenfox.error.model.User;
 import java.util.ArrayList;
-import org.springframework.context.annotation.Bean;
 
-/**
- * Created by aze on 25/10/17.
- */
 public class UserService {
-
-    @Bean
-    public UserService userService() {
-        return new UserService();
-    }
 
     private ArrayList<User> users;
 
@@ -27,7 +19,4 @@ public class UserService {
         users.add(user);
     }
 
-    public UserService service() {
-        return new UserService();
-    }
 }

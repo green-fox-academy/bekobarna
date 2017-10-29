@@ -8,22 +8,23 @@ public class Fox {
     String name;
     Foods food;
     Drinks drink;
-    Tricks tricks;
+    List<Tricks> listOfTricks;
 
 
-    public Fox(String name, Foods food, Drinks drink, Tricks tricks) {
+    public Fox(String name, Foods food, Drinks drink,
+        List<Tricks> listOfTricks) {
         this.name = name;
         this.food = food;
         this.drink = drink;
-        this.tricks = tricks;
+        this.listOfTricks = listOfTricks;
     }
 
-    public Tricks getTricks() {
-        return tricks;
+    public List<Tricks> getListOfTricks() {
+        return listOfTricks;
     }
 
-    public void setTricks(Tricks tricks) {
-        this.tricks = tricks;
+    public void setListOfTricks(List<Tricks> listOfTricks) {
+        this.listOfTricks = listOfTricks;
     }
 
     public Fox() {

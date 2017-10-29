@@ -20,10 +20,10 @@ public class MainController {
     public String information (Model model) {
         fox.setName("Mr.Green");
         model.addAttribute("name", fox.getName());
-        model.addAttribute("food", Foods.SALAD);
-        model.addAttribute("drink", Drinks.WATER);
-        model.addAttribute("tricks", Tricks.values());
-        model.addAttribute("tricksamount", Tricks.values().length);
+        model.addAttribute("food", fox.getFood());
+        model.addAttribute("drink", fox.getDrink());
+        model.addAttribute("tricks", fox.getListOfTricks().size());
+        model.addAttribute("tricksamount", fox.getListOfTricks().size());
         return "information";
     }
 
