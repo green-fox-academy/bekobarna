@@ -1,6 +1,5 @@
 package com.greenfox.programmerfoxclub.controller;
 
-import com.greenfox.programmerfoxclub.model.DrinkEnums;
 import com.greenfox.programmerfoxclub.model.Foods;
 import com.greenfox.programmerfoxclub.model.Fox;
 import com.greenfox.programmerfoxclub.model.Tricks;
