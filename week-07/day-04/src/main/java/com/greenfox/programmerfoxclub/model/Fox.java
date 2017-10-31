@@ -7,11 +7,20 @@ import java.util.List;
 public class Fox {
     String name;
     Foods food;
-    Drinks drink;
+    DrinkEnums drink;
     List<Tricks> listOfTricks;
 
 
-    public Fox(String name, Foods food, Drinks drink,
+    public Fox() {
+        this.listOfTricks = new ArrayList<>();
+    }
+
+    public int FoxSize () {
+        return listOfTricks.size();
+    }
+
+
+    public Fox(String name, Foods food, DrinkEnums drink,
         List<Tricks> listOfTricks) {
         this.name = name;
         this.food = food;
@@ -27,9 +36,6 @@ public class Fox {
         this.listOfTricks = listOfTricks;
     }
 
-    public Fox() {
-    }
-
     public Foods getFood() {
         return food;
     }
@@ -38,11 +44,11 @@ public class Fox {
         this.food = food;
     }
 
-    public Drinks getDrink() {
+    public DrinkEnums getDrink() {
         return drink;
     }
 
-    public void setDrink(Drinks drink) {
+    public void setDrink(DrinkEnums drink) {
         this.drink = drink;
     }
 

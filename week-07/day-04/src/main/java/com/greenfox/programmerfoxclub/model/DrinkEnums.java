@@ -1,6 +1,18 @@
 package com.greenfox.programmerfoxclub.model;
 
-    public enum Drinks {
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class Drinks {
+    List<String> drinks;
+
+    public String getDrink() {
+
+    }
+
         BEER("Beer"),
         WHISKEY("Whiskey"),
         VODKA("Vodka"),
@@ -8,7 +20,7 @@ package com.greenfox.programmerfoxclub.model;
 
         private String name;
 
-        Drinks(String name) {
+        DrinkEnums(String name) {
             this.name = name;
         }
 
@@ -16,5 +28,5 @@ package com.greenfox.programmerfoxclub.model;
         public String toString() {
             return name;
         }
-    }
 
+}

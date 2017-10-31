@@ -10,7 +10,7 @@ public enum  Tricks {
 
     Tricks(String name) {
         this.name = name;
-    }
+    };
 
     @Override
     public String toString() {

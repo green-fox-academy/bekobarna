@@ -11,17 +11,15 @@
   <li><a href="/trickcenter">Trick center</a></li>
 </ul>
 <img th:src="@{/greenfox.png}"/>
-<p th:text="'This is ' + ${name} + '. Currently living on ' + ${food} + ' and ' + ${drink} + '. He knows ' + ${tricksamount} + ' tricks.'">This if Mr. Fox. Currently living on pizza and lemonade. He knows 2 tricks.</p>
+<p th:text="'This is ' + ${fox.getName()} + '. Currently living on ' + ${fox.getFood()} + ' and ' + ${fox.getDrink()} + '. He knows ' + ${fox.FoxSize()} + ' tricks.'">This if Mr. Fox. Currently living on pizza and lemonade. He knows 2 tricks.</p>
 <h1>Known tricks</h1>
-
-<div th:if="${tricks == 0}">
+<div th:if="${fox.FoxSize() == 0}">
   <div th:text="'You know no tricks. Go and learn some!'"/>
 </div>
-<div th:unless="${tricks == 0}">
+<div th:unless="${fox.FoxSize() == 0}">
   <ul th:each="trick : ${fox.tricks}">
     <li th:text="${trick}"/>
   </ul>
 </div>
-
 </body>
 </html>

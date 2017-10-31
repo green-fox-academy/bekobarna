@@ -20,7 +20,15 @@
             th:text="${trick}"></option>
   </select>
 
-  <p><input type="submit" value="Learn"/></p>
+  <form action="#" th:action="@{/catch}" th:object="${pokemon}" method="post">
+
+    <p><input type="submit" value="Learn" /></p>
+  </form>
+
+
+  <form th:action="@{/user/save}" th:object="${tricks}" method="post">
+    <p><input type="submit" value="Learn" /></p>
+  </form>
 </table>
 </body>
 </html>

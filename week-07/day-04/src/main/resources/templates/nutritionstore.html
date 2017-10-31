@@ -26,7 +26,11 @@
           th:value="${drink}"
           th:text="${drink}"></option>
 </select>
-  <p><input type="submit" value="Change"/></p>
+
+  <form action="#" th:action="@{/save}" th:object="${drink}" method="post">
+
+    <p><input type="submit" value="Change" /></p>
+  </form>
 </table>
 </body>
 </html>
