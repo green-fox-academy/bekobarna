@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1> Todos for today:</h1>
+<a href="/todo/add">Add new todo</a>
 <table>
 <tr>
   <th>Id</th>
@@ -14,12 +15,30 @@
   <th>Done</th>
   <th>Is urgent</th>
 </tr>
-<tr th:each="todo: ${todos}" >
-  <td th:text="${todo.id}" />
-  <td th:text="${todo.title}" />
-  <td th:text="${todo.isUrgent()}"/>
-  <td th:text="${todo.isDone()}"/>
-</tr>
+  <tr th:each="todo: ${todos}">
+    <td th:text="${todo.id}" />
+    <td th:text="${todo.title}" />
+    <td th:text="${todo.isUrgent()}"/>
+    <td th:text="${todo.isDone()}"/>
+  </tr>
 </table>
 </body>
 </html>
+
+
+<!--<div th:if="${todos.isDone() = done}">
+    <tr th:each="todo: ${todos}">
+      <td th:text="${todo.id}" />
+      <td th:text="${todo.title}" />
+      <td th:text="${todo.isUrgent()}"/>
+      <td th:text="${todo.isDone()}"/>
+    </tr>
+  </div>
+  <div th:unless="${todos.isDone() = done}">
+    <tr th:each="todo: ${todos}">
+    <td th:text="${todo.id}" />
+    <td th:text="${todo.title}" />
+    <td th:text="${todo.isUrgent()}"/>
+    <td th:text="${todo.isDone()}"/>
+    </tr>
+  </div>-->
