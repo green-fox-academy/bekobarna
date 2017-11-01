@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit ToDo</title>
+</head>
+<body>
+<h1>Edit TODO</h1>
+
+<form action="/todo/submitForm" th:object="${todos}" method="post">
+  <input name="title"/>
+  <input type="checkbox" name="isUrgent" value="Urgent"/>
+  <input type="checkbox" name="isDone" value="Done"/>
+  <button type="submit" value="Submit"></button>
+</form>
+
+</body>
+</html>

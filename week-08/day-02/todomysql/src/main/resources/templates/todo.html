@@ -20,6 +20,8 @@
     <td th:text="${todo.title}" />
     <td th:text="${todo.isUrgent()}"/>
     <td th:text="${todo.isDone()}"/>
+    <td> <a th:href="@{/${inputid}/delete}">Delete</a></td>
+    <td> <a th:href="@{/${editid}/edit"}>Edit</a></td>
   </tr>
 </table>
 </body>
