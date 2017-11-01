@@ -33,15 +33,15 @@ public class ToDoController {
         return "todo";
     }*/
 
-    @GetMapping(value = "/add")
-    public String add() {
+    @RequestMapping(value = "/addForm", method = RequestMethod.GET)
+    public String addTodo() {
         return "add";
     }
 
-    @PostMapping(value = "/create")
-    public String addTodo(@RequestParam String title){
-        toDoRepository.save(new ToDo(title));
-        return "redirect:/todo/";
+    @RequestMapping(value = "/submitForm", method = RequestMethod.POST)
+    public String submitToDo(@RequestParam String title){
+    toDoRepository.save(new ToDo(title));
+    return "redirect:/todo/";
     }
 
 }
