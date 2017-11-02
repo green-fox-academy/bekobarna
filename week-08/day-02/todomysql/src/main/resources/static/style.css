@@ -3,21 +3,14 @@ html {
   margin: auto;
 }
 
-table {
+table, tr {
   margin:auto;
-}
-
-th, td {
-  margin:auto;
-  text-align: center;
   border: 2px solid black;
-  background-color: white;
 }
 
 h1 {
   text-align: center;
   font-size: 300%;
-  color: bl;
   padding-right: 10%;
   padding-left: 10%;
   text-decoration: underline;

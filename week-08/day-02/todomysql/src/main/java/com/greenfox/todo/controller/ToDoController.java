@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,47 +24,45 @@ public class ToDoController {
     ToDoRepository toDoRepository;
 
 
-    @RequestMapping(value = {"/"})
+    @RequestMapping(value = {"","/"})
     public String list (Model model) {
         model.addAttribute("todos", toDoRepository.findAll());
         return "todo";
     }
 
    /* @RequestMapping(value = {"/done"})
-    public String listdone (Model model, @RequestParam(value = "isActive", required = false) boolean done) {
+    public String listdone (Model model, @RequestParam(value = "isActive") Boolean done) {
         model.addAttribute("done", done);
         model.addAttribute("todos", toDoRepository.findAll());
         return "todo";
     }*/
 
-    @RequestMapping(value = "/addForm", method = RequestMethod.GET)
+    @GetMapping(value = "/addForm")
     public String addTodo() {
         return "add";
     }
 
-    @RequestMapping(value = "/submitForm", method = RequestMethod.POST)
+    @PostMapping(value = "/submitForm")
     public String submitToDo(@RequestParam String title){
     toDoRepository.save(new ToDo(title));
     return "redirect:/todo/";
     }
 
-    @RequestMapping(value = "/{id}/delete")
-    public String delete(Model model, @PathVariable Integer id) {
+    @GetMapping(value = "/{id}/delete")
+    public String delete(@PathVariable int id) {
         toDoRepository.delete(id);
-        model.addAttribute("inputid", id);
         return "redirect:/todo/";
     }
 
-    @RequestMapping(value = "/{id}/edit", method = RequestMethod.GET)
-    public String getEdit(Model model, @PathVariable Integer id) {
-        model.addAttribute("editid", toDoRepository.findOne(id));
+    @GetMapping(value = "/{id}/edit")
+    public String getEdit(Model model, @PathVariable int id) {
+        model.addAttribute("edittodo", toDoRepository.findOne(id));
         return "edit";
     }
 
-    @RequestMapping(value = "/{id}/edit", method = RequestMethod.POST)
-    public String edit(Model model, @PathVariable Integer id) {
-
-        model.addAttribute("save", toDoRepository);
+    @PostMapping(value = {"/", ""})
+    public String edit(Model model, @ModelAttribute ToDo toDo) {
+        toDoRepository.save(toDo);
         return "redirect:/todo/";
     }
 
