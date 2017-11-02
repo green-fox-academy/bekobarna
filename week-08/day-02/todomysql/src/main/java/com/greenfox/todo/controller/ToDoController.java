@@ -3,6 +3,7 @@ package com.greenfox.todo.controller;
 import com.greenfox.todo.model.ToDo;
 import com.greenfox.todo.repository.ToDoRepository;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import com.sun.xml.internal.bind.v2.TODO;
 import javax.jws.WebParam.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,15 +57,16 @@ public class ToDoController {
 
     @GetMapping(value = "/{id}/edit")
     public String getEdit(Model model, @PathVariable int id) {
-        model.addAttribute("edittodo", toDoRepository.findOne(id));
+        model.addAttribute("todo", toDoRepository.findOne(id));
+        model.addAttribute("todoindex", id);
         return "edit";
     }
 
-    @PostMapping(value = {"/", ""})
-    public String edit(Model model, @ModelAttribute ToDo toDo) {
+
+    @PostMapping(value = "/editToDo")
+    public String editToDo(@ModelAttribute ToDo toDo){
         toDoRepository.save(toDo);
         return "redirect:/todo/";
     }
-
 
 }

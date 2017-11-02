@@ -2,20 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8" />
-  <title th:text="'Edit ' + ${edittodo.title}"></title>
+  <title th:text="'Edit ' + ${title}"></title>
 </head>
 <body>
-<h1 th:text="'Edit ' + ${edittodo.title}">Edit TODO</h1>
+<h1 th:text="'Edit ' + ${title}">Edit TODO</h1>
 
-<form action="/todo" th:object="${edittodo}" method="post">
+<form action="/todo/editToDo" th:object="${todo}" method="post">
   <input type="hidden" th:field="*{id}" />
-  <!--<input th:field="*{isUrgent}" />
-  <input th:field="*{isDone}" />-->
-  <input  type="field" th:field="*{title}" />
-  <input  type="checkbox" th:field="*{isDone}" />
-  <input  type="checkbox" th:field="*{isUrgent}" />
-  <button type="submit" value="Save">Save</button>
+  <input type="field" name="title" th:field="*{title}" />
+  <br /> <input type="checkbox" name="urgent" th:checked="*{urgent}" th:text="Urgent" />
+  <br /> <input type="checkbox" name="done" th:checked="*{done}" th:text="Done" />
+  <br /> <button type="submit" value="Save">Submit</button>
 </form>
-
+<a th:href="@{/todo/}">Cancel</a>
 </body>
 </html>
