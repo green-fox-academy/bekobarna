@@ -17,6 +17,7 @@ public class TodoApplication implements CommandLineRunner {
 		SpringApplication.run(TodoApplication.class, args);
 	}
 
+
 	@Override
 	public void run(String... args) throws Exception {
 	}

@@ -9,6 +9,11 @@
 
 <form action="/todo/submitForm" method="post">
   <input name="title"/>
+  <input  type="text" name="duedate"
+          th:value="${user.dateOfBirth}?${#dates.format(user.dateOfBirth, 'dd-MM-yyyy')}:''"
+          placeholder="dd-mm-yyyy"  id="pickyDate"/>
+
+  <!--<input type="date" name="duedate" />-->
   <button type="submit" value="Submit">Submit</button>
 </form>
 

@@ -2,9 +2,8 @@ package com.greenfox.todo.controller;
 
 import com.greenfox.todo.model.ToDo;
 import com.greenfox.todo.repository.ToDoRepository;
-import com.sun.org.apache.xpath.internal.operations.Mod;
-import com.sun.xml.internal.bind.v2.TODO;
-import javax.jws.WebParam.Mode;
+import java.time.LocalDate;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -44,8 +42,8 @@ public class ToDoController {
     }
 
     @PostMapping(value = "/submitForm")
-    public String submitToDo(@RequestParam String title){
-    toDoRepository.save(new ToDo(title));
+    public String submitToDo(@RequestParam String title, @RequestParam Date date){
+    toDoRepository.save(new ToDo(title, date));
     return "redirect:/todo/";
     }
 

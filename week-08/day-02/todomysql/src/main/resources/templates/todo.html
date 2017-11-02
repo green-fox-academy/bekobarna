@@ -14,12 +14,22 @@
   <th>Action</th>
   <th>Done</th>
   <th>Is urgent</th>
+  <th>Creation date</th>
+  <th>Due date</th>
+
+
 </tr>
   <tr th:each="todo: ${todos}">
     <td th:text="${todo.id}" />
     <td th:text="${todo.title}" />
     <td th:text="${todo.urgent}"/>
     <td th:text="${todo.done}"/>
+    <td th:text="${todo.date}" />
+    <td th:text="${todo.duedate}" />
+
+<!--
+    <td th:text="${todo.list}"/>
+-->
     <td> <a th:href="@{/todo/{todoid}/delete(todoid=${todo.id})}">Delete</a></td>
     <td> <a th:href="@{/todo/{todoid}/edit(todoid=${todo.id})}">Edit</a></td>
   </tr>
