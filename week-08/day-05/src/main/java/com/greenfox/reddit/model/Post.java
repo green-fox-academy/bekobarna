@@ -19,6 +19,11 @@ public class Post {
     public Post() {
     }
 
+    public Post(String content) {
+        this.content = content;
+        this.score = 0;
+    }
+
     public Post(int score, String content) {
         this.score = score;
         this.content = content;
