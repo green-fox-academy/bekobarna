@@ -2,6 +2,8 @@ package com.greenfox.todo.controller;
 
 import com.greenfox.todo.model.ToDo;
 import com.greenfox.todo.repository.ToDoRepository;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,9 +44,16 @@ public class ToDoController {
     }
 
     @PostMapping(value = "/submitForm")
-    public String submitToDo(@RequestParam String title, @RequestParam Date date){
-    toDoRepository.save(new ToDo(title, date));
+    public String submitToDo(@RequestParam String title, @RequestParam String date){
+        Date date1 = null;
+        try {
+            date1 = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        toDoRepository.save(new ToDo(title, date1));
     return "redirect:/todo/";
+
     }
 
     @GetMapping(value = "/{id}/delete")
