@@ -2,10 +2,8 @@ package com.greenfox.todo.controller;
 
 import com.greenfox.todo.model.ToDo;
 import com.greenfox.todo.repository.ToDoRepository;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import com.greenfox.todo.service.DateProvider;
 import java.time.LocalDate;
-import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +22,9 @@ public class ToDoController {
     @Autowired
     ToDoRepository toDoRepository;
 
+    @Autowired
+    DateProvider dateProvider;
+
 
     @RequestMapping(value = {"","/"})
     public String list (Model model) {
@@ -31,29 +32,15 @@ public class ToDoController {
         return "todo";
     }
 
-   /* @RequestMapping(value = {"/done"})
-    public String listdone (Model model, @RequestParam(value = "isActive") Boolean done) {
-        model.addAttribute("done", done);
-        model.addAttribute("todos", toDoRepository.findAll());
-        return "todo";
-    }*/
-
     @GetMapping(value = "/addForm")
     public String addTodo() {
         return "add";
     }
 
     @PostMapping(value = "/submitForm")
-    public String submitToDo(@RequestParam String title, @RequestParam String date){
-        Date date1 = null;
-        try {
-            date1 = new SimpleDateFormat("yyyy-MM-dd").parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        toDoRepository.save(new ToDo(title, date1));
+    public String submitToDo(@RequestParam String title, @RequestParam(value = "duedate") String date){
+        toDoRepository.save(new ToDo(title, dateProvider.newdate(date)));
     return "redirect:/todo/";
-
     }
 
     @GetMapping(value = "/{id}/delete")

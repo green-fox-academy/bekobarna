@@ -8,8 +8,9 @@
 
 <form action="/posts/submitPost" method="post">
   <input name="content"/>
-  <button type="submit" value="Submit" th:text="'Content'"></button>
+  <br /> <button type="submit" value="Submit" th:text="'Content'"></button>
 </form>
+<a th:href="@{/posts/}">Cancel</a>
 
 </body>
 </html>

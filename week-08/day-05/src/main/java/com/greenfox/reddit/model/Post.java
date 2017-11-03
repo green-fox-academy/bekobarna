@@ -16,6 +16,11 @@ public class Post {
     int score;
     String content;
 
+    public Post(int score) {
+        this.score = score;
+
+    }
+
     public Post() {
     }
 
@@ -52,4 +57,13 @@ public class Post {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public void upVote() {
+        this.score += 1;
+    }
+
+    public void downVote() {
+        this.score -= 1;
+    }
+
 }

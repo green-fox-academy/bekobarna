@@ -2,13 +2,10 @@ package com.greenfox.todo.model;
 
 
 import java.time.LocalDate;
-import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -24,9 +21,9 @@ public class ToDo {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate date;
 
-    @Temporal(value = TemporalType.DATE)
+    //@Temporal(value = TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    Date duedate;
+    LocalDate duedate;
 
 
     public ToDo() {
@@ -35,7 +32,7 @@ public class ToDo {
         this.date = LocalDate.now();
     }
 
-    public ToDo(String title, Date date) {
+    public ToDo(String title, LocalDate date) {
         this.title = title;
         this.urgent = false;
         this.done = false;
@@ -43,11 +40,11 @@ public class ToDo {
         this.duedate = date;
     }
 
-    public Date getDuedate() {
+    public LocalDate getDuedate() {
         return duedate;
     }
 
-    public void setDuedate(Date duedate) {
+    public void setDuedate(LocalDate duedate) {
         this.duedate = duedate;
     }
 

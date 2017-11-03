@@ -18,7 +18,8 @@
   </tr>
   <tr th:each="post: ${posts}">
     <td th:text="${post.score}" />
-    <td th:text="'actions'" />
+    <td th:text="${post.upVote} + ' ' + ${post.downVote}" />
+    <td th:text="${post.score}" />
     <td th:text="${post.content}" />
 
 

@@ -10,6 +10,7 @@
 <form action="/todo/editToDo" th:object="${todo}" method="post">
   <input type="hidden" th:field="*{id}" />
   <input type="field" name="title" th:field="*{title}" />
+  <br /> <input type="date" name="duedate" th:value="*{duedate}"  />
   <br /> <input type="checkbox" name="urgent" th:checked="*{urgent}" th:text="Urgent" />
   <br /> <input type="checkbox" name="done" th:checked="*{done}" th:text="Done" />
   <br /> <button type="submit" value="Save">Submit</button>
