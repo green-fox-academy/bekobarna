@@ -3,7 +3,6 @@ package com.greenfox.todo.controller;
 import com.greenfox.todo.model.ToDo;
 import com.greenfox.todo.repository.ToDoRepository;
 import com.greenfox.todo.service.DateProvider;
-import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

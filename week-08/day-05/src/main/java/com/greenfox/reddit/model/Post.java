@@ -1,37 +1,44 @@
 package com.greenfox.reddit.model;
 
 
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Post {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
-    Long id;
-    int score;
+    public Long id;
+    public int score;
     String content;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    public LocalDate date;
 
     public Post(int score) {
         this.score = score;
-
+        this.date = LocalDate.now();
     }
 
     public Post() {
+        this.date = LocalDate.now();
     }
 
     public Post(String content) {
         this.content = content;
         this.score = 0;
+        this.date = LocalDate.now();
     }
 
     public Post(int score, String content) {
         this.score = score;
         this.content = content;
+        this.date = LocalDate.now();
     }
 
     public Long getId() {
@@ -58,12 +65,6 @@ public class Post {
         this.content = content;
     }
 
-    public void upVote() {
-        this.score += 1;
-    }
 
-    public void downVote() {
-        this.score -= 1;
-    }
 
 }

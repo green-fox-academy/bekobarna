@@ -3,6 +3,7 @@ package com.greenfox.reddit.controller;
 
 import com.greenfox.reddit.model.Post;
 import com.greenfox.reddit.repository.PostRepository;
+import com.greenfox.reddit.service.PostProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,8 @@ public class PostController {
     @Autowired
     PostRepository postRepository;
 
+    @Autowired
+    PostProvider postProvider;
 
     @GetMapping(value = {"", "/"})
     public String index(Model model) {
@@ -38,15 +41,15 @@ public class PostController {
     }
 
     @GetMapping(value = "/{id}/up")
-    public String upVote(Model model, @PathVariable Long id) {
-        postRepository.(postRepository.findOne(id).upVote());
-        model.addAttribute("post", postRepository.findOne(id));
-        model.addAttribute("postindex", id);
-        return "redirect:/lists/";
-
+    public String upVote(@PathVariable Long id) {
+        postProvider.upVote(id);
+        return "redirect:/posts/";
     }
 
-
-
+    @GetMapping(value = "/{id}/down")
+    public String downVote(@PathVariable Long id) {
+        postProvider.downVote(id);
+        return "redirect:/posts/";
+    }
 
 }

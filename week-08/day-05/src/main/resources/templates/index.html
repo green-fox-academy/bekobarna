@@ -6,24 +6,24 @@
   <link rel="stylesheet" th:href="@{style.css}" />
 </head>
 <body>
-<a href="/posts/add">Add new post</a>
+  <a href="/posts/add">Add new post</a>
 
-<h1>Posts</h1>
-<table>
-  <tr>
-    <th>Score</th>
-    <th>Actions</th>
-    <th>Content</th>
+  <h1>Posts</h1>
+  <table>
+    <tr>
+      <th>Score</th>
+      <th>Actions</th>
+      <th>Content</th>
+      <th>Date of creation</th>
 
-  </tr>
-  <tr th:each="post: ${posts}">
-    <td th:text="${post.score}" />
-    <td th:text="${post.upVote} + ' ' + ${post.downVote}" />
-    <td th:text="${post.score}" />
-    <td th:text="${post.content}" />
+    </tr>
+    <tr th:each="post : ${posts}">
+      <td th:text="${post.score}" />
+      <td> <a th:href="@{/posts/{id}/up(id=${post.id})}">+</a> <a th:href="@{/posts/{id}/down(id=${post.id})}">-</a> </td>
+      <td th:text="${post.content}" />
+      <td th:text="${post.date}" />
 
-
-  </tr>
-</table>
+    </tr>
+  </table>
 </body>
 </html>

@@ -21,7 +21,7 @@ public class ToDo {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate date;
 
-    //@Temporal(value = TemporalType.DATE)
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate duedate;
 
