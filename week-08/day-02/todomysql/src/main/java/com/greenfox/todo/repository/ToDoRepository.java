@@ -7,8 +7,15 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface ToDoRepository extends CrudRepository<ToDo, Integer>{
 
+
+    @Query(value = "SELECT * FROM Todo WHERE urgent = TRUE ", nativeQuery = true)
+    List<ToDo> findurgent();
+
+
+    @Query(value = "SELECT * FROM Todo WHERE done = TRUE ", nativeQuery = true)
+    List<ToDo> finddone();
+
    /* @Query()
-    //findAllByIsUrgent  list by urgent
     List<ToDo> findAllByUrgentIs(Boolean urgent);
 */
 }

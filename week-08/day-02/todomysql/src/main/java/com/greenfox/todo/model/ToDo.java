@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class ToDo {
@@ -17,12 +16,7 @@ public class ToDo {
     String title;
     Boolean urgent;
     Boolean done;
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate date;
-
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate duedate;
 
 

@@ -25,7 +25,7 @@ public class PostController {
 
     @GetMapping(value = {"", "/"})
     public String index(Model model) {
-        model.addAttribute("posts", postRepository.findAll());
+        model.addAttribute("posts", postRepository.listall());
         return "index";
     }
 

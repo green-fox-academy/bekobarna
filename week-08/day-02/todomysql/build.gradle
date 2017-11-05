@@ -30,5 +30,6 @@ dependencies {
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile 'org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.1.RELEASE'
+	compile 'org.webjars:bootstrap:3.3.7-1'
+	compile 'org.webjars.bower:jquery:3.2.1'
 }

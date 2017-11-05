@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8" />
   <title>Add new todo</title>
@@ -7,13 +7,12 @@
 <body>
 <h1>Add new todo</h1>
 
-<form action="/todo/submitForm" method="post">
+<form action="/todo/add" method="post">
   <input name="title"/>
   <input type="date" th:value="*{duedate}" name="duedate"  />
   <button type="submit" value="Submit">Submit</button>
 </form>
 <a th:href="@{/todo/}">Cancel</a>
-
 
 </body>
 </html>

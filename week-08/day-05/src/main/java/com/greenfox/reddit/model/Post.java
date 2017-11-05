@@ -17,7 +17,6 @@ public class Post {
     public int score;
     String content;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     public LocalDate date;
 
     public Post(int score) {

@@ -28,15 +28,17 @@ public class ToDoController {
     @RequestMapping(value = {"","/"})
     public String list (Model model) {
         model.addAttribute("todos", toDoRepository.findAll());
+        model.addAttribute("urgent", toDoRepository.findurgent());
+        model.addAttribute("done", toDoRepository.finddone());
         return "todo";
     }
 
-    @GetMapping(value = "/addForm")
+    @GetMapping(value = "/add")
     public String addTodo() {
         return "add";
     }
 
-    @PostMapping(value = "/submitForm")
+    @PostMapping(value = "/add")
     public String submitToDo(@RequestParam String title, @RequestParam(value = "duedate") String date){
         toDoRepository.save(new ToDo(title, dateProvider.newdate(date)));
     return "redirect:/todo/";
@@ -55,8 +57,7 @@ public class ToDoController {
         return "edit";
     }
 
-
-    @PostMapping(value = "/editToDo")
+    @PostMapping(value = "/{id}/edit")
     public String editToDo(@ModelAttribute ToDo toDo){
         toDoRepository.save(toDo);
         return "redirect:/todo/";

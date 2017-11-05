@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>ToDo</title>
-  <link rel="stylesheet" th:href="@{style.css}" />
+  <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
 <h1> Todos for today:</h1>
-<a href="/todo/addForm">Add new todo</a>
+<a href="/todo/add">Add new todo</a>
 <table>
-<tr>
-  <th>Id</th>
-  <th>Action</th>
-  <th>Done</th>
-  <th>Is urgent</th>
-  <th>Creation date</th>
-  <th>Due date</th>
+  <tr>
+    <th>Id</th>
+    <th>Action</th>
+    <th>Done</th>
+    <th>Is urgent</th>
+    <th>Creation date</th>
+    <th>Due date</th>
 
 
 </tr>
@@ -27,30 +27,11 @@
     <td th:text="${todo.date}" />
     <td th:text="${todo.duedate}" />
 
-<!--
-    <td th:text="${todo.list}"/>
--->
     <td> <a th:href="@{/todo/{todoid}/delete(todoid=${todo.id})}">Delete</a></td>
     <td> <a th:href="@{/todo/{todoid}/edit(todoid=${todo.id})}">Edit</a></td>
   </tr>
 </table>
+<script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-<!--<div th:if="${todos.isDone() = done}">
-    <tr th:each="todo: ${todos}">
-      <td th:text="${todo.id}" />
-      <td th:text="${todo.title}" />
-      <td th:text="${todo.isUrgent()}"/>
-      <td th:text="${todo.isDone()}"/>
-    </tr>
-  </div>
-  <div th:unless="${todos.isDone() = done}">
-    <tr th:each="todo: ${todos}">
-    <td th:text="${todo.id}" />
-    <td th:text="${todo.title}" />
-    <td th:text="${todo.isUrgent()}"/>
-    <td th:text="${todo.isDone()}"/>
-    </tr>
-  </div>-->
