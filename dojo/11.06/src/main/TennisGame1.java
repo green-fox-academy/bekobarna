@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Objects;
+
 public class TennisGame1  implements TennisGame {
 
     private int playerOneScore = 0;
@@ -7,16 +9,20 @@ public class TennisGame1  implements TennisGame {
     private String playerOne;
     private String playerTwo;
 
-    public TennisGame1(String player1Name, String player2Name) {
-        this.playerOne = player1Name;
-        this.playerTwo = player2Name;
+    public TennisGame1(String playerOne, String playerTwo) {
+        this.playerOne = playerOne;
+        this.playerTwo = playerTwo;
     }
 
-    public void wonPoint(String playerName) {
-        if (playerName == "player1")
+    public void scorePoint(String playerName) {
+        if (Objects.equals(playerName, "player1")) {
             playerOneScore += 1;
-        else
+        }
+        else if (Objects.equals(playerName, "player2")) {
             playerTwoScore += 1;
+        } else {
+            System.out.println("The player only can be player1 or player2");
+        }
     }
 
     public String getScore() {

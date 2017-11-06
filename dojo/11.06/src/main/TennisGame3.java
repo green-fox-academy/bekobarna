@@ -26,7 +26,7 @@ public class TennisGame3 implements TennisGame {
         }
     }
 
-    public void wonPoint(String playerName) {
+    public void scorePoint(String playerName) {
         if (playerName == "player1")
             this.p1 += 1;
         else

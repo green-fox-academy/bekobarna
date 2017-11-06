@@ -2,7 +2,7 @@ package main;
 
 public interface TennisGame {
 
-    void wonPoint(String playerName);
+    void scorePoint(String playerName);
     String getScore();
 
 }
