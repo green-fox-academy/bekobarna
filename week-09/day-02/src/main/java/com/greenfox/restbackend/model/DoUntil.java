@@ -3,31 +3,29 @@ package com.greenfox.restbackend.model;
 import java.util.Objects;
 
 public class DoUntil {
-    public int until;
     public int result;
 
-    public DoUntil(int until, String type) {
-        this.until = until;
-        if (Objects.equals(type, "sum")) {
+    public DoUntil(int until, String method) {
+        if (Objects.equals(method, "sum")) {
             this.result = sum(until);
-        } else if (Objects.equals(type, "factor "))
+        } if (Objects.equals(method, "factor"))
             this.result = factor(until);
-        this.until = until;
     }
 
-    public int sum(int input) {
+    public int sum(int until) {
         int temp = 0;
-        for (int i = 0; i < input; i++) {
-            temp += input;
+        for (int i = 0; i <= until; i++) {
+            temp += i;
         }
         return temp;
     }
 
-    public int factor(int input) {
-        int temp = 0;
-        for (int i = 0; i < input; i++) {
-            temp *= input;
+    public int factor(int until) {
+        int temp = 1;
+        for (int i = 1; i <= until; i++) {
+            temp *= i;
         }
-        return temp;
+        int end = temp;
+        return end;
     }
 }
