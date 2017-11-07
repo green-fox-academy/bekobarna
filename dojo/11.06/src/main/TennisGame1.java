@@ -27,42 +27,18 @@ public class TennisGame1  implements TennisGame {
 
     public String getScore() {
         String score = "";
-        int tempScore = 0;
         if (playerOneScore == playerTwoScore) {
-            score = EqualPlayerScore(playerOneScore);
+            score = equalPlayerScoreProvider(playerOneScore);
         } else if (playerOneScore>=4 || playerTwoScore>=4) {
-            int minusResult = playerOneScore-playerTwoScore;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            score = advantageScoreProvider(playerOneScore - playerTwoScore);
         } else {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = playerOneScore;
-                else { score+="-"; tempScore = playerTwoScore;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
+            score = unevenScoreProvider(playerOneScore, playerTwoScore);
         }
         return score;
     }
 
-    public String EqualPlayerScore(int playerOneScore) {
-        String score = null;
+    public String equalPlayerScoreProvider(int playerOneScore) {
+        String score = "";
         if(playerOneScore == 0){
             score = "Love-All";
         }else if(playerOneScore == 1){
@@ -75,27 +51,49 @@ public class TennisGame1  implements TennisGame {
             score = "Deuce";
         }
         return score;
+    }
 
+    public String advantageScoreProvider(int minusScoresResult){
+        String score = "";
 
+        if (minusScoresResult == 1) {
+            score = "Advantage player1";
+        } else if (minusScoresResult == -1){
+            score = "Advantage player2";
+        } else if (minusScoresResult >= 2) {
+            score = "Win for player1";
+        } else {
+            score = "Win for player2";
+        }
+        return score;
+    }
 
-        /*   switch (playerOneScore)
-        {
-            case 0:
-                score = "Love-All";
-                break;
-            case 1:
-                score = "Fifteen-All";
-                break;
-            case 2:
-                score = "Thirty-All";
-                break;
-            case 3:
-                score = "Forty-All";
-                break;
-            default:
-                score = "Deuce";
-                break;
-        } */
+    public String unevenScoreProvider(int playerOneScore, int playerTwoScore){
+        String score = "";
+
+        for (int i = 0; i < 3; i++) {
+            int setCounter = i;
+            if (playerOneScore > playerTwoScore) {
+
+            } else {
+                score = tempScoreContainer(setCounter);
+            }
+        }
+        return score;
+    }
+
+    public String  tempScoreContainer(int setCounter) {
+        String score = "";
+        if (setCounter == 0) {
+            score  = "Love";
+        } else if (setCounter == 1) {
+            score = "Fifteen";
+        } else if (setCounter == 2) {
+            score = "Thirty";
+        } else if (setCounter == 3) {
+            score = "Fourty";
+        }
+        return score;
     }
 
 }
