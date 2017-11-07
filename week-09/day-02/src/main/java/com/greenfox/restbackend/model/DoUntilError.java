@@ -1,10 +1,10 @@
 package com.greenfox.restbackend.model;
 
-public class DoublingError {
+public class DoUntilError {
 
     public String error;
 
-    public DoublingError() {
+    public DoUntilError() {
         this.error = "Please provide an input!";
     }
 }

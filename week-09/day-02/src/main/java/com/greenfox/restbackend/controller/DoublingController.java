@@ -2,7 +2,7 @@ package com.greenfox.restbackend.controller;
 
 
 import com.greenfox.restbackend.model.Doubling;
-import com.greenfox.restbackend.model.DoublingError;
+import com.greenfox.restbackend.model.Error;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +20,8 @@ public class DoublingController {
     }
 
     @ExceptionHandler(MissingServletRequestParameterException.class)
-    public DoublingError error () {
-        return new DoublingError();
+    public Error error () {
+        return new Error();
     }
 
 

@@ -1,8 +1,8 @@
 package com.greenfox.restbackend.controller;
 
 
+import com.greenfox.restbackend.model.Error;
 import com.greenfox.restbackend.model.Greeter;
-import com.greenfox.restbackend.model.GreeterError;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,9 +20,9 @@ public class GreeterController {
     }
 
     @ExceptionHandler(MissingServletRequestParameterException.class)
-    public GreeterError handleMissingName(MissingServletRequestParameterException ex) {
+    public Error handleMissingName(MissingServletRequestParameterException ex) {
         String type = ex.getParameterName();
-        return new GreeterError(type);
+        return new Error(type);
     }
 
 }

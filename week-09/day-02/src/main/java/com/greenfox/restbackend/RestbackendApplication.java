@@ -10,4 +10,3 @@ public class RestbackendApplication {
 		SpringApplication.run(RestbackendApplication.class, args);
 	}
 }
-
