@@ -13,11 +13,11 @@ public class DoUntil {
     }
 
     public int sum(int until) {
-        int temp = 0;
+        int sum = 0;
         for (int i = 0; i <= until; i++) {
-            temp += i;
+            sum += i;
         }
-        return temp;
+        return sum;
     }
 
     public int factor(int until) {
@@ -25,7 +25,7 @@ public class DoUntil {
         for (int i = 1; i <= until; i++) {
             temp *= i;
         }
-        int end = temp;
-        return end;
+        return temp;
     }
+
 }

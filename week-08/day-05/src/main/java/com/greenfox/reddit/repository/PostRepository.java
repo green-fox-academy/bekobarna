@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface PostRepository extends CrudRepository<Post, Long>{
 
-    @Query(value = "SELECt * FROM Post ORDER BY score DESC ", nativeQuery = true)
+    @Query(value = "SELECT * FROM Post ORDER BY score DESC ", nativeQuery = true)
     List<Post> listall();
 
 }
