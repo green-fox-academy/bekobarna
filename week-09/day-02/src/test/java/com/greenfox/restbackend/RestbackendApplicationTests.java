@@ -64,14 +64,48 @@ public class RestbackendApplicationTests {
 	}
 
 	@Test
-	public void testGreeterError() throws Exception {
+	public void testGreeterNameError() throws Exception {
+		mockMvc.perform(get("/greeter?name=Petike")
+			.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().isOk())
+			.andExpect(jsonPath("$.error", is("Please provide a title!")));
+	}
+
+	@Test
+	public void testGreeterTitleError() throws Exception {
+		mockMvc.perform(get("/greeter?title=student")
+			.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().isOk())
+			.andExpect(jsonPath("$.error", is("Please provide a name!")));
+	}
+
+	@Test
+	public void testGreeterBothError() throws Exception {
 		mockMvc.perform(get("/greeter")
 			.contentType(MediaType.APPLICATION_JSON))
 			.andExpect(status().isOk())
 			.andExpect(jsonPath("$.error", is("Please provide a name!")));
 	}
 
-	
+	@Test
+	public void testAppendaCorrect() throws Exception {
+		mockMvc.perform(get("/appenda/macsk")
+			.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.appended", is("macska")));
+	}
+
+	@Test
+	public void testAppendaError() throws Exception {
+		mockMvc.perform(get("/appenda/")
+			.contentType(MediaType.APPLICATION_JSON))
+			.andExpect(status().isNotFound());
+	}
+
+
+
+
 
 
 
