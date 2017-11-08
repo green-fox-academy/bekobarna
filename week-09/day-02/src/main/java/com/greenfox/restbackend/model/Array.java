@@ -5,44 +5,43 @@ import java.util.Objects;
 
 public class Array {
 
-    public String what;
-    public List<Integer> numbers;
+    public int[] numbers;
+    public Object result;
 
+    public Array() {
+    }
 
-    public Array(String what, List<Integer> numbers) {
-        this.what = what;
+    public Array(String what, Array array) {
         if (Objects.equals(what, "sum")) {
-            this.numbers = sum(numbers);
-
+            this.result = sum(array.numbers);
         } else if (Objects.equals(what, "multiply")) {
-            this.numbers = multiply(numbers);
-
+            this.result = multiply(array.numbers);
         } else if (Objects.equals(what, "double")) {
-            this.numbers = doubling(numbers);
+            this.result = doubling(array.numbers);
         }
     }
 
-    public List<Integer> sum(List<Integer> until) {
-        List<Integer> tempList = null;
-        for (int i = 0; i < until.size(); i++) {
-
+    public int sum(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
         }
-        return tempList;
+        return sum;
     }
 
-    public List<Integer> multiply(List<Integer> until) {
-        List<Integer> tempList = null;
-        for (int i = 0; i <= until.size(); i++) {
-
+    public int multiply(int[] array) {
+        int multi = 1;
+        for (int i = 1; i < array.length; i++) {
+            multi = array[i] * array[i-1];
         }
-        return tempList;
+        return multi;
     }
 
-    public List<Integer> doubling(List<Integer> until) {
-        List<Integer> tempList = null;
-        for (int i = 0; i <= until.size(); i++) {
-
+    public int[] doubling(int[] array) {
+        int[] doubled = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            doubled[i] = (array[i] * 2);
         }
-        return tempList;
+        return doubled;
     }
 }

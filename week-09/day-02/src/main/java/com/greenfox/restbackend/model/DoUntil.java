@@ -5,11 +5,13 @@ import java.util.Objects;
 public class DoUntil {
     public int result;
 
-    public DoUntil(int until, String method) {
+
+    public DoUntil(String method, int until) {
         if (Objects.equals(method, "sum")) {
             this.result = sum(until);
-        } if (Objects.equals(method, "factor"))
+        } else if (Objects.equals(method, "factor")) {
             this.result = factor(until);
+        }
     }
 
     public int sum(int until) {
@@ -21,11 +23,11 @@ public class DoUntil {
     }
 
     public int factor(int until) {
-        int temp = 1;
+        int factor = 1;
         for (int i = 1; i <= until; i++) {
-            temp *= i;
+            factor *= i;
         }
-        return temp;
+        return factor;
     }
 
 }

@@ -5,6 +5,6 @@ public class DoUntilError {
     public String error;
 
     public DoUntilError() {
-        this.error = "Please provide an input!";
+        this.error = "Please provide a number!";
     }
 }

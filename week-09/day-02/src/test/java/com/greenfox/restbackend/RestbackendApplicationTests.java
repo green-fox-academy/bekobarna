@@ -103,9 +103,43 @@ public class RestbackendApplicationTests {
 			.andExpect(status().isNotFound());
 	}
 
+	@Test
+	public void testDoUntilSumCorrect() throws Exception {
+		mockMvc.perform(post("/dountil/sum")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content("{\"until\": \"5\"}"))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.result", is(15)));
+	}
 
+	@Test
+	public void testDoUntilFactorCorrect() throws Exception {
+		mockMvc.perform(post("/dountil/factor")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content("{\"until\": \"4\"}"))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.result", is(24)));
+	}
 
+	@Test
+	public void testDoUntilError() throws Exception {
+		mockMvc.perform(post("/dountil/")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content(""))
+			.andExpect(status().isNotFound());
+	}
 
+	@Test
+	public void testArraySumCorrect() throws Exception {
+		mockMvc.perform(post("/arrays/sum")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content("{\"numbers\": "\[5, 10]\"}))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.result", is(15)));
+	}
 
 
 
