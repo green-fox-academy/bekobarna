@@ -1,6 +1,7 @@
 package com.greenfox.restbackend;
 
 import java.nio.charset.Charset;
+import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -135,13 +136,38 @@ public class RestbackendApplicationTests {
 	public void testArraySumCorrect() throws Exception {
 		mockMvc.perform(post("/arrays/sum")
 			.contentType(MediaType.APPLICATION_JSON)
-			.content("{\"numbers\": "\[5, 10]\"}))
+			.content("{\"numbers\": [5, 10]}"))
 			.andExpect(status().isOk())
 			.andExpect(content().contentType(contentType))
 			.andExpect(jsonPath("$.result", is(15)));
 	}
 
+	@Test
+	public void testArrayMultiplyCorrect() throws Exception {
+		mockMvc.perform(post("/arrays/multiply")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content("{\"numbers\": [5, 10]}"))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.result", is(50)));
+	}
 
+	@Test
+	public void testArrayDoubleCorrect() throws Exception {
+		mockMvc.perform(post("/arrays/double")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content("{\"numbers\": [5, 10]}"))
+			.andExpect(status().isOk())
+			.andExpect(content().contentType(contentType))
+			.andExpect(jsonPath("$.result", Matchers.contains(10, 20)));
+	}
 
+	@Test
+	public void testArrayError() throws Exception {
+		mockMvc.perform(post("/arrays/")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content(""))
+			.andExpect(status().isNotFound());
+	}
 
 }
