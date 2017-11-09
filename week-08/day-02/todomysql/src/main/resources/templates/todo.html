@@ -3,35 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <title>ToDo</title>
-  <link href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
-<h1> Todos for today:</h1>
-<a href="/todo/add">Add new todo</a>
-<table>
-  <tr>
+
+<div class="container"></div>
+  <h1 class="text-center">Todos for today</h1>
+<a class="btn btn-info btn-lg" href="/todo/add" role="button">Add new Todo</a>
+
+<table class="table table-bordered">
+  <tr class="info">
     <th>Id</th>
     <th>Action</th>
-    <th>Done</th>
-    <th>Is urgent</th>
+    <th>Is it done?</th>
+    <th>Is it urgent?</th>
     <th>Creation date</th>
     <th>Due date</th>
+  </tr>
 
-
-</tr>
-  <tr th:each="todo: ${todos}">
+  <tr class="text-center" th:each="todo: ${todos}">
     <td th:text="${todo.id}" />
     <td th:text="${todo.title}" />
-    <td th:text="${todo.urgent}"/>
+    <td th:text="${todo.urgent}" />
     <td th:text="${todo.done}"/>
     <td th:text="${todo.date}" />
     <td th:text="${todo.duedate}" />
 
-    <td> <a th:href="@{/todo/{todoid}/delete(todoid=${todo.id})}">Delete</a></td>
-    <td> <a th:href="@{/todo/{todoid}/edit(todoid=${todo.id})}">Edit</a></td>
+    <td> <a class="btn btn-danger" th:href="@{/todo/{todoid}/delete(todoid=${todo.id})}" role="button">Delete</a></td>
+    <td> <a class="btn btn-warning" th:href="@{/todo/{todoid}/edit(todoid=${todo.id})}" role="button">Edit</a></td>
   </tr>
 </table>
-<script src="webjars/jquery/1.11.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

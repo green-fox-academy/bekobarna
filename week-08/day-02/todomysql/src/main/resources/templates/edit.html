@@ -2,19 +2,36 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8" />
-  <title th:text="'Edit ' + ${title}"></title>
+  <title>Edit Todo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
-<h1 th:text="'Edit ' + ${title}">Edit TODO</h1>
+<div class="container"></div>
+<h1 class="text-center">Edit Todo</h1>
 
-<form th:action="@{/todo/{id}/edit (id=${id})}" th:object="${todo}" method="post">
-  <input th:type="hidden" th:field="*{id}" />
-  <input type="text" th:field="*{title}" />
-  <br /> <input th:type="date" name="duedate" th:value="*{duedate}" />
-  <br /> <input th:type="checkbox" name="urgent" th:checked="*{urgent}" th:text="Urgent" />
-  <br /> <input th:type="checkbox" name="done" th:checked="*{done}" th:text="Done" />
-  <br /> <button type="submit" value="Save">Submit</button>
+<form class="group" th:action="@{/todo/{id}/edit (id=${id})}" th:object="${todo}" method="post">
+  <div class="form-group">
+    <label for="title">Name</label>
+    <input type="title" class="form-control" id="title" name="title" ></input>
+    <label for="duedate">Due date</label>
+    <input type="date" th:value="*{duedate}" name="duedate"  />
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="urgent" th:checked="*{urgent}"></input>Is it urgent?
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="urgent" th:checked="*{done}"></input>Is it done?
+      </label>
+    </div>
+  </div>
+
+  <button class="btn btn-info" type="submit" value="Submit">Submit</button>
 </form>
-<a th:href="@{/todo/}">Cancel</a>
+
+<a class="btn btn-warning" th:href="@{/todo/}" role="button">Cancel</a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

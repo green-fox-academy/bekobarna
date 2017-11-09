@@ -3,16 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>Add new todo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
-<h1>Add new todo</h1>
+<div class="container"></div>
+<h1 class="text-center">Add new Todo</h1>
 
-<form action="/todo/add" method="post">
-  <input name="title"/>
-  <input type="date" th:value="*{duedate}" name="duedate"  />
-  <button type="submit" value="Submit">Submit</button>
+
+<form class="form-inline" th:action="@{/todo/add}" method="post">
+  <div class="form-group">
+    <div>
+      <label for="title">Name</label>
+      <input type="title" class="form-control" id="title" name="title" ></input>
+    </div>
+    <div>
+      <label for="duedate">When do you want to do it?</label>
+      <input type="date" th:value="*{duedate}" name="duedate"  />
+    </div>
+  </div>
+
+  <button class="btn btn-info" type="submit" value="Submit">Submit</button>
 </form>
-<a th:href="@{/todo/}">Cancel</a>
 
+
+<a class="btn btn-warning" th:href="@{/todo/}" role="button">Cancel</a>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

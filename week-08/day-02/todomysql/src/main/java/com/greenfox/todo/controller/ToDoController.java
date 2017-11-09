@@ -28,8 +28,8 @@ public class ToDoController {
     @RequestMapping(value = {"","/"})
     public String list (Model model) {
         model.addAttribute("todos", toDoRepository.findAll());
-        model.addAttribute("urgent", toDoRepository.findurgent());
-        model.addAttribute("done", toDoRepository.finddone());
+        /*model.addAttribute("urgent", toDoRepository.findurgent());
+        model.addAttribute("done", toDoRepository.finddone());*/
         return "todo";
     }
 
