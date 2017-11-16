@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import com.greenfox.bekob.myapplication.R;
 import com.greenfox.bekob.myapplication.model.Message;
-import java.util.List;
+
 
 /**
  * Created by bekob on 2017-11-16.
@@ -30,14 +29,10 @@ public class MessageAdapter extends ArrayAdapter<Message> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.message, parent, false);
         }
-
         TextView username = (TextView) convertView.findViewById(R.id.username);
         username.setText(current.getUsername());
-
         TextView message = (TextView) convertView.findViewById(R.id.text);
         message.setText(current.getText());
-
-
         return convertView;
     }
 }
