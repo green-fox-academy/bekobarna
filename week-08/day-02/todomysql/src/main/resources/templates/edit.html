@@ -11,9 +11,9 @@
 
 <form class="group" th:action="@{/todo/{id}/edit (id=${id})}" th:object="${todo}" method="post">
   <div class="form-group">
-    <label for="title">Name</label>
+    <label for="title">How do you want to call it?</label>
     <input type="title" class="form-control" id="title" name="title" ></input>
-    <label for="duedate">Due date</label>
+    <label for="duedate">What is your deadline?</label>
     <input type="date" th:value="*{duedate}" name="duedate"  />
     <div class="checkbox">
       <label>

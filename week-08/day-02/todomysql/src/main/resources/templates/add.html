@@ -13,11 +13,11 @@
 <form class="form-inline" th:action="@{/todo/add}" method="post">
   <div class="form-group">
     <div>
-      <label for="title">Name</label>
+      <label for="title">How do you want to call it?</label>
       <input type="title" class="form-control" id="title" name="title" ></input>
     </div>
     <div>
-      <label for="duedate">When do you want to do it?</label>
+      <label for="duedate">What is your deadline?</label>
       <input type="date" th:value="*{duedate}" name="duedate"  />
     </div>
   </div>

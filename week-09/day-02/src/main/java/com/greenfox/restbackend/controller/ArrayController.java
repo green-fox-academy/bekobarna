@@ -3,6 +3,7 @@ package com.greenfox.restbackend.controller;
 
 import com.greenfox.restbackend.model.Array;
 import com.greenfox.restbackend.model.ArrayError;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class ArrayController {
         return new Array(type, array);
     }
 
-    @ExceptionHandler(NullPointerException.class)
+    @ExceptionHandler({NullPointerException.class, HttpMessageNotReadableException.class})
     public ArrayError error() {
         return new ArrayError();
     }
